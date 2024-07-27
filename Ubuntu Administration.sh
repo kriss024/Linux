@@ -82,34 +82,35 @@ smbd --version
 
 mkdir -p /home/<username>/Publiczny
 
-sudo chmod -R 755 /home/<username>/Publiczny
-sudo chown -R nobody:nobody /home/<username>/Publiczny
-sudo chcon -t samba_share_t /home/<username>/Publiczny
+sudo mkdir -p /home/<username>/Publiczny
+sudo chmod 0777 /home/<username>/Publiczny
 
+# Configure Samba
 sudo nano /etc/samba/smb.conf
 
-# Look for this line:
-workgroup = WORKGROUP
+# Open the configuration file
+[global]
+  workgroup = WORKGROUP
+  netbios name = samba
+  security = user
 
 # Scroll down and add
 [Publiczny]
    comment = Samba on Ubuntu
    path = /home/krzysiek/Publiczny
-   browseable = yes
-   public = yes
+   browsable = yes
    read only = no
    writable = yes
    guest only = yes
    force create mode = 0666
    force directory mode = 0777
-   
-# Then press Ctrl-O to save and Ctrl-X to exit from the nano text editor.
-
-sudo service smbd restart
-sudo ufw allow samba
 
 # How to add a user to Samba
 sudo smbpasswd -a <username>
+
+# Restart Samba
+sudo service smbd restart
+sudo ufw allow samba
 
 # On Windows, open up File Manager and edit the file path to:
 \\ip-address\Publiczny
