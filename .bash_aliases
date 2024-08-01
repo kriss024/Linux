@@ -72,6 +72,9 @@ alias ps='ps auxf'
 # Forcefully terminate a process.
 alias kill='kill -9'
 
+# Use htop for process management (if installed).
+alias top='htop'
+
 # Display system information and network configuration.
 alias meminfo='free -m -l -t'
 alias cpuinfo='lscpu'
@@ -82,6 +85,7 @@ alias netinfo='ifconfig'
 
 # Display information about network connections.
 alias portinfo='netstat -tulanp'
+alias tcpinfo='netstat -plnt'
 alias portsinfo='ss -tuln'
 
 # Download a file from a website, resuming if interrupted.
@@ -89,9 +93,6 @@ alias wget='wget -c'
 
 # Fetch data from a website.
 alias curl='curl -L'
-
-# Use htop for process management (if installed).
-alias top='htop'
 
 # System Updates and Cleaning
 # For Debian/Ubuntu based systems
