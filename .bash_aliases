@@ -72,25 +72,23 @@ alias ps='ps auxf'
 # Forcefully terminate a process.
 alias kill='kill -9'
 
-# Display system information.
+# Display system information and network configuration.
 alias meminfo='free -m -l -t'
 alias cpuinfo='lscpu'
 alias diskinfo='df -h'
 alias osinfo='uname -a'
 alias ipinfo='curl ifconfig.me'
+alias netinfo='ifconfig'
+
+# Display information about network connections.
+alias portinfo='netstat -tulanp'
+alias portsinfo='ss -tuln'
 
 # Download a file from a website, resuming if interrupted.
 alias wget='wget -c'
 
 # Fetch data from a website.
 alias curl='curl -L'
-
-# Check network configuration.
-alias netinfo='ifconfig'
-
-# Display information about network connections.
-alias ports='netstat -tulanp'
-alias ports2='ss -tuln'
 
 # Use htop for process management (if installed).
 alias top='htop'
