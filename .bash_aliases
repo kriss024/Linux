@@ -148,7 +148,7 @@ alias pipfre='pip freeze > requirements.txt'
 alias pipinsreq='pip install -r requirements.txt'
 
 # ----------------- SPARK ALIASES --------------------
-alias sparklist='yarn application -list | grep -ie $(whoami)'
+alias sparklist='yarn application -list | grep -hi $(whoami)'
 alias sparkkill='yarn application -kill'
 alias sparklog='yarn logs -applicationId'
 
