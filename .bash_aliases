@@ -28,7 +28,7 @@ alias p='pwd'
 alias r='reset'
 alias c='clear'
 alias h='history'
-alias hh='history | grep -hi'
+alias hh='history | grep -hi $1'
 alias t='touch'
 alias j='jobs -l'
 alias mkdir='mkdir -p'
@@ -40,6 +40,9 @@ alias pbpaste='xsel --clipboard --output'
 
 # Colorize the grep command output.
 alias grep='grep --color=auto'
+
+# List all currently running background jobs.
+alias jobs='jobs -l'
 
 # Find executable files.
 alias where='which'
