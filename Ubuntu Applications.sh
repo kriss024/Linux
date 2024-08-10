@@ -1,3 +1,4 @@
+# Copy/paste in Linux
 sudo apt install xclip
 
 # curl is a command line tool to transfer data to or from a server
@@ -52,7 +53,10 @@ wget -b <file>
 sudo apt install silversearcher-ag
 
 # Install GNOME Tweak Tool
+sudo apt update
+sudo add-apt-repository universe
 sudo apt install gnome-tweaks
+gnome-tweaks
 
 # Install Google Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -75,14 +79,17 @@ git --version
 sudo apt install ./GitHubDesktop-linux-2.0.4-linux1.deb
 
 # Install Visual Studio Code
-sudo apt install software-properties-common apt-transport-https wget
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+sudo apt-get install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+rm -f packages.microsoft.gpg
+sudo apt install apt-transport-https
+sudo apt update
 sudo apt install code
 
-# How do I make VS Code open a new tab by default?
-"workbench.editor.enablePreview"
-"workbench.editor.enablePreviewFromQuickOpen"
+# Install Boxes
+sudo apt install gnome-boxes
 
 # Install Docker Engine on Ubuntu
 # Uninstall old versions
