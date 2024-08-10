@@ -54,7 +54,7 @@ sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noa
 # Installing Nvidia drivers on RHEL 9
 sudo dnf config-manager --add-repo http://developer.download.nvidia.com/compute/cuda/repos/rhel9/$(uname -i)/cuda-rhel9.repo
 sudo dnf module install nvidia-driver:latest-dkms
-nvidia-smi -L
+nvidia-smi
 
 sudo dnf install -y ansible
 # Installing Container Device Interface (CDI) Support
@@ -78,6 +78,9 @@ sudo yum install kernel-headers
 # Installing Java
 sudo yum install java
 sudo yum install java-devel
+
+# Installing xsel (Clipboard)
+sudo dnf install xsel
 
 # Installing GVim
 sudo yum install gvim
