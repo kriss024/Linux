@@ -1,3 +1,6 @@
+# Switch between the CLI and GUI on a Linux
+# Ctrl + Alt + F3 - to the Command Line Interface (CLI)
+# Ctrl + Alt + F2 - to the Graphical User Interface (GUI)
 # Use Control + L to clear the screen and Control + D to exit
 
 # Show bash history
