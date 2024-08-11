@@ -79,7 +79,7 @@ sudo yum install kernel-headers
 sudo yum install java
 sudo yum install java-devel
 
-# Installing xsel (Clipboard)
+# Clipboard management
 sudo dnf install xsel
 
 # Installing GVim
