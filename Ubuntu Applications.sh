@@ -1,9 +1,9 @@
+# Install the requisite dependencies
+sudo apt update
+sudo apt install software-properties-common curl apt-transport-https ca-certificates -y
+
 # Clipboard management
 sudo apt install xclip
-
-# curl is a command line tool to transfer data to or from a server
-sudo apt update
-sudo apt-get install curl
 
 # htop - an interactive process viewer
 sudo apt update
