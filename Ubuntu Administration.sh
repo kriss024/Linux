@@ -2,30 +2,54 @@
 sudo su
 passwd #changes passwords for user accounts
 
-# To show details about your machine hostname run the following command.
-hostnamectl
-lsb_release -a
-free -m
-lscpu
-df -h
-
-# Display Linux distro version
-cat /etc/*-release
-
-# Update Ubuntu Linux
-sudo apt update -y && sudo apt upgrade -y
-sudo apt-get dist-upgrade -y
+# 1 Update Ubuntu Linux
+sudo apt update && sudo apt upgrade -y 
+sudo apt dist-upgrade -y
 
 # In order to remove all locally downloaded deb packages and all other apt-get caches, execute the below command.
 sudo apt-get autoremove -y
 sudo apt-get clean -y
 
-sudo apt install -y lsb-release
-
 # Remove Old Kernels (If No Longer Required)
 sudo apt-get autoremove --purge
 
-# Check Firewall Status
+# 2 Installing Additional Dependencies
+sudo apt update
+sudo apt install lsb-release -y
+sudo apt install software-properties-common curl apt-transport-https ca-certificates -y
+sudo apt install build-essential manpages-dev -y
+
+sudo apt install tilix
+
+# Clipboard management
+sudo apt install xclip
+
+# net-tools, the collection of base networking utilities
+sudo apt install net-tools
+
+# Install Zip and Unzip in Linux
+sudo apt install zip unzip
+
+# Installing Git
+sudo apt install git
+
+# Installing Java
+sudo apt update
+sudo apt install default-jre
+java -version
+
+# Install Midnight Commander
+sudo apt update
+sudo apt install mc
+
+# Tilde - Command Line Text Editors
+sudo apt install tilde
+tilde
+
+# Install ubuntu-restricted-extras 
+sudo apt install ffmpeg ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
+
+# 3 Check Firewall Status
 sudo ufw enable
 sudo ufw allow 22
 
@@ -56,6 +80,16 @@ ssh -V
 
 sudo service ssh status
 sudo ufw allow ssh
+
+# To show details about your machine hostname run the following command.
+hostnamectl
+lsb_release -a
+free -m
+lscpu
+df -h
+
+# Display Linux distro version
+cat /etc/*-release
 
 # Ubuntu Hyper-V Guest Display Resolution
 sudo nano /etc/default/grub
