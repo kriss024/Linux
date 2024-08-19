@@ -1,10 +1,3 @@
-# Install the requisite dependencies
-sudo apt update
-sudo apt install software-properties-common curl apt-transport-https ca-certificates -y
-
-# Clipboard management
-sudo apt install xclip
-
 # htop - an interactive process viewer
 sudo apt update
 sudo apt install htop
@@ -21,14 +14,6 @@ atop
 sudo apt update
 sudo apt-get install lsof
 sudo lsof -i -P -n
-
-# Installing Java
-sudo apt update
-sudo apt install default-jre
-java -version
-
-# Install Zip and Unzip in Linux
-sudo apt install zip unzip
 
 # Install Midnight Commander
 sudo apt update
