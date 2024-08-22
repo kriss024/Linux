@@ -19,16 +19,21 @@ sudo apt install lsb-release -y
 sudo apt install software-properties-common curl apt-transport-https ca-certificates -y
 sudo apt install build-essential manpages-dev -y
 
-sudo apt install tilix
+# Installing Intel microcode firmware
+sudo apt install intel-microcode
 
 # Clipboard management
 sudo apt install xclip
 
+# Install Tilix Terminal Emulator
+sudo apt install tilix
+
 # net-tools, the collection of base networking utilities
 sudo apt install net-tools
 
-# Install Zip and Unzip in Linux
+# Install Zip, Unzip, RAR and UnRAR
 sudo apt install zip unzip
+sudo apt install rar unrar
 
 # Installing Git
 sudo apt install git
@@ -46,18 +51,9 @@ sudo apt install mc
 sudo apt install tilde
 tilde
 
-# Install ubuntu-restricted-extras 
-sudo apt install ffmpeg ttf-mscorefonts-installer rar unrar libavcodec-extra gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-vaapi
-
-# 3 Check Firewall Status
-sudo ufw enable
-sudo ufw allow 22
-
-sudo ufw status
-sudo ufw status verbose
-sudo ufw status numbered
-sudo ufw app list
-sudo ufw app info Samba
+# Installing Microsoft fonts
+sudo apt install ttf-mscorefonts-installer
+sudo fc-cache -f -v
 
 # Configure a network interface
 sudo apt install net-tools
@@ -69,10 +65,6 @@ ifconfig
 # In order to get a list of all TCP and UDP network services up-and-running by default in your Ubuntu server
 sudo netstat -tulpn
 
-# How to Shut Down Ubuntu
-sudo shutdown now
-sudo reboot
-
 # Ubuntu Linux install OpenSSH server
 sudo apt update
 sudo apt install openssh-server
@@ -80,6 +72,20 @@ ssh -V
 
 sudo service ssh status
 sudo ufw allow ssh
+
+# 3 Check Firewall Status
+sudo ufw enable
+sudo ufw allow 22
+
+sudo ufw status
+sudo ufw status verbose
+sudo ufw status numbered
+sudo ufw app list
+sudo ufw app info Samba
+
+# How to Shut Down Ubuntu
+sudo shutdown now
+sudo reboot
 
 # To show details about your machine hostname run the following command.
 hostnamectl
@@ -105,9 +111,6 @@ sudo update-grub
 sudo apt install gnome-tweak-tool
 gnome-tweaks
 # Change "Applications" to "Adwaita-dark" at "Themes" of "Appearance".
-
-# Installing Intel microcode firmware
-sudo apt install intel-microcode
 
 # Install and Configure Samba
 sudo apt update
