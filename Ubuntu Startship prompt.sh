@@ -6,19 +6,25 @@ curl -sS https://starship.rs/install.sh | sh
 mkdir -p ~/.config && touch ~/.config/starship.toml
 
 # All configuration for starship is done in this TOML (opens new window)file:
-# Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+[character]
+success_symbol = '[\$](bold green)'
 
-# Inserts a blank line between shell prompts
-add_newline = true
+[username]
+style_user = '#a6aaf1 bold'
+style_root = 'white bold'
+format = '[$user]($style)'
+disabled = false
+show_always = true
 
-# Replace the '❯' symbol in the prompt with '➜'
-[character] # The name of the module we are configuring is 'character'
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+[hostname]
+ssh_only = false
+format = '[@](white bold)[$hostname](#50fa7b bold)'
+disabled = false
 
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
+[directory]
+style = '#00a5ff bold'
+truncation_length = 0
+truncate_to_repo = false
 
 # Bash
 # Add the following to the end of ~/.bashrc:
