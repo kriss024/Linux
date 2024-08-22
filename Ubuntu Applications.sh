@@ -76,6 +76,14 @@ sudo apt install code
 # Install Boxes
 sudo apt install gnome-boxes
 
+# Install Onlyoffice Desktop Editors
+sudo apt install ./onlyoffice-desktopeditors_amd64.deb
+
+# Install Viewnior
+sudo add-apt-repository ppa:desdelinux/viewnior
+sudo apt-get update
+sudo apt-get install viewnior
+
 # Install Docker Engine on Ubuntu
 # Uninstall old versions
 sudo apt-get remove docker docker-engine docker.io containerd runc
