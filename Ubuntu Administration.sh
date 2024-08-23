@@ -4,7 +4,6 @@ passwd #changes passwords for user accounts
 
 # 1 Update Ubuntu Linux
 sudo apt update && sudo apt upgrade -y
-sudo apt full-upgrade -y
 sudo apt dist-upgrade -y
 
 # In order to remove all locally downloaded deb packages and all other apt-get caches, execute the below command.
