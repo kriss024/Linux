@@ -76,6 +76,12 @@ sudo ufw allow ssh
 # 3 Check Firewall Status
 sudo ufw enable
 sudo ufw allow 22
+sudo ufw allow http
+sudo ufw allow https
+
+# Alternatively, you can reset the firewall configuration to the default rules.
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
 
 sudo ufw status
 sudo ufw status verbose
