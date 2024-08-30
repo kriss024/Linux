@@ -163,7 +163,7 @@ alias init='git init'
 # Basic Git commands
 alias status='git status'
 alias branch='git branch'
-alias remote='git branch -r'
+alias remote='git branch -a -v'
 alias fetch='git fetch'
 alias diff='git diff'
 
