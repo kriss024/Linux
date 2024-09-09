@@ -81,6 +81,7 @@ alias top='htop'
 # Display system information and network configuration.
 alias meminfo='free -m -l -t'
 alias cpuinfo='lscpu'
+alias driversinfo='lspci -k'
 alias diskinfo='df -h'
 alias usbinfo='lsusb'
 alias osinfo='uname -a'
