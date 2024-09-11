@@ -24,3 +24,4 @@ cd gnome-terminal
 ./install.sh
 
 # Go to https://draculatheme.com/gtk
+# Wallpaper https://raw.githubusercontent.com/linuxdotexe/nordic-wallpapers/master/wallpapers/ign_astronaut.png
