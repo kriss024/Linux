@@ -1,17 +1,10 @@
-# htop - an interactive process viewer
-sudo apt update
-sudo apt install htop
-htop
-# or
-top
-
-# atop - Advanced System and Process Monitor
-sudo apt update
-sudo apt install atop
-atop
+# btop - Advanced System and Process Monitor
+sudo apt-get update
+sudo apt-get install btop
+btop
 
 # list of open ports in linux
-sudo apt update
+sudo apt-get update
 sudo apt-get install lsof
 sudo lsof -i -P -n
 
