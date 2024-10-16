@@ -2,6 +2,7 @@
 git config --global user.name "Krzysztof Bruszewski"
 git config --global user.email krzysztof.bruszewski@gmail.com
 git config --global color.ui auto
+git config --global pull.rebase true
 git config --global core.editor "nano"
 git config --list
 
