@@ -51,8 +51,8 @@ git branch -r
 git checkout -b <local_branch> <origin>/<branch>
 
 # Synchronizacja lokalnego repozytorium do stanu na zdalnym origin/master
-git fetch origin master
-git reset --hard origin/main
+git reset --hard
+git clean -fd
 
 # Wysyłanie brancha na zdalne repozytorium
 git clone <remote_url>
