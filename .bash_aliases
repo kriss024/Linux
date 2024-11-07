@@ -101,27 +101,27 @@ alias curl='curl -L'
 
 # System Updates and Cleaning
 # For Debian/Ubuntu based systems
-alias aupgrade='sudo apt update && sudo apt upgrade'
-alias aupdate='sudo apt update'
-alias ainst='sudo apt install'
-alias arem='sudo apt remove'
+alias supdate='sudo apt update'
+alias supgrade='sudo apt update && sudo apt upgrade'
+alias sinstall='sudo apt install'
+alias sremove='sudo apt remove'
 
 # For Red Hat/Fedora systems
 alias dcheck='sudo dnf check-update'
-alias dupgrade='sudo dnf update && sudo dnf upgrade'
 alias dupdate='sudo dnf update'
-alias dins='sudo dnf install'
-alias drem='sudo dnf remove'
+alias dupgrade='sudo dnf update && sudo dnf upgrade'
+alias dinstall='sudo dnf install'
+alias dremove='sudo dnf remove'
 
 # For Yum-based systems
 alias ycheck='sudo yum check-update'
-alias yupgrade='sudo yum update && sudo yum upgrade'
 alias yupdate='sudo yum update'
-alias yins='sudo yum install'
-alias yrem='sudo yum remove'
+alias yupgrade='sudo yum update && sudo yum upgrade'
+alias yinstall='sudo yum install'
+alias yremove='sudo yum remove'
 
 # Apply only security-related updates.
-alias yupsec='sudo yum --security update'
+alias ysecurityup='sudo yum --security update'
 
 # Creating a tar archive, e.g., tar -cvf archive.tar .
 alias tarc='tar -czvf'
