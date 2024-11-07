@@ -99,7 +99,9 @@ echo "${varName}"
 # Deleting variables
 unset variablename
 # To set value of an environment variable
-export Variable=value
+export Variable="value"
+# Displaying an environment variable value
+echo $Variable
 # Displays all environment variables
 env
 
