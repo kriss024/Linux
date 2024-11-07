@@ -133,20 +133,29 @@ sudo nano /etc/samba/smb.conf
 
 # Open the configuration file
 [global]
-  workgroup = WORKGROUP
-  netbios name = samba
-  security = user
+  workgroup = WORKGROUP       # Default workgroup name for Windows networks
+  server string = Samba Server %v
+  security = user             # Requires users to authenticate
 
-# Scroll down and add
-[Publiczny]
+# Public share - read-only for everyone
+[Public]
+   comment = Samba on Ubuntu
+   path = /srv/samba/public
+   browsable = yes
+   writable = no
+   guest ok = yes
+   read only = yes
+   
+# Private share - authenticated users only
+[Private]
    comment = Samba on Ubuntu
    path = /home/krzysiek/Publiczny
    browsable = yes
-   read only = no
    writable = yes
-   guest only = yes
-   force create mode = 0666
-   force directory mode = 0777
+   guest ok = no
+   valid users = @smbusers
+   create mask = 0660
+   directory mask = 0770
 
 # How to add a user to Samba
 sudo smbpasswd -a <username>
@@ -157,6 +166,9 @@ sudo ufw allow samba
 
 # On Windows, open up File Manager and edit the file path to:
 \\ip-address\Publiczny
+
+# From Linux, open up File Manager
+smb://ip-address/Publiczny
 
 # How to Assign Static IP Address
 ip add show
