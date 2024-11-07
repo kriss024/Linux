@@ -99,7 +99,6 @@ alias wget='wget -c'
 # Fetch data from a website.
 alias curl='curl -L'
 
-# System Updates and Cleaning
 # For Debian/Ubuntu based systems
 alias supdate='sudo apt update'
 alias supgrade='sudo apt update && sudo apt upgrade'
