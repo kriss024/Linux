@@ -32,7 +32,7 @@ alias hh='history | grep -hi $1'
 alias t='touch'
 alias j='jobs -l'
 alias mkdir='mkdir -p'
-alias edit='nano $1'
+alias edit='tilde $1'
 
 # Clipboard management using xsel
 alias pbcopy='xsel --clipboard --input'
