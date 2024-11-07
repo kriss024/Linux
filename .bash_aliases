@@ -104,6 +104,7 @@ alias supdate='sudo apt update'
 alias supgrade='sudo apt update && sudo apt upgrade'
 alias sinstall='sudo apt install'
 alias sremove='sudo apt remove'
+alias sclean='sudo apt-get clean && sudo apt-get autoclean'
 
 # For Red Hat/Fedora systems
 alias dcheck='sudo dnf check-update'
