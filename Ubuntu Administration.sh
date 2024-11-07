@@ -28,20 +28,12 @@ sudo apt install xclip
 # Install Tilix Terminal Emulator
 sudo apt install tilix
 
-# net-tools, the collection of base networking utilities
-sudo apt install net-tools
-
 # Install Zip, Unzip, RAR and UnRAR
 sudo apt install zip unzip
 sudo apt install rar unrar
 
-# Installing Git
-sudo apt install git
-
-# Installing Java
-sudo apt update
-sudo apt install default-jre
-java -version
+# Install Thunar File Manager
+sudo apt install thunar 
 
 # Install Midnight Commander
 sudo apt update
@@ -50,6 +42,14 @@ sudo apt install mc
 # Tilde - Command Line Text Editors
 sudo apt install tilde
 tilde
+
+# Installing Git
+sudo apt install git
+
+# Installing Java
+sudo apt update
+sudo apt install default-jre
+java -version
 
 # Installing Microsoft fonts
 sudo apt install ttf-mscorefonts-installer
