@@ -77,33 +77,25 @@ sudo add-apt-repository ppa:desdelinux/viewnior
 sudo apt-get update
 sudo apt-get install viewnior
 
-# Install Docker Engine on Ubuntu
-# Uninstall old versions
-sudo apt-get remove docker docker-engine docker.io containerd runc
+# Docker and Docker Desktop install
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+		$(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo service docker start
 
-sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg \
-    lsb-release
+docker run hello-world
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-
-echo \
-  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-# Install Docker Engine
 sudo apt-get update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-apt-cache madison docker-ce
-
-sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io
-
-sudo docker run hello-world
+sudo apt-get install ./docker-desktop-amd64.deb
+systemctl --user start docker-desktop
 
 # Start and Automate Docker
 sudo systemctl start docker
@@ -112,5 +104,20 @@ sudo systemctl enable docker
 # Manage Docker as a non-root user
 sudo groupadd docker
 sudo usermod -aG docker $USER
+
 # Either do a "newgrp docker" or log out/in to activate the changes to groups.
 docker run hello-world
+
+# Docker uninstall
+sudo systemctl stop docker
+
+dpkg -l | grep -i docker
+
+sudo apt-get purge -y docker-buildx-plugin docker-ce docker-ce-cli docker-ce-rootless-extras docker-compose-plugin docker-desktop
+sudo apt-get autoremove -y --purge docker-buildx-plugin docker-ce docker-ce-cli docker-ce-rootless-extras docker-compose-plugin docker-desktop
+
+sudo rm -rf /etc/docker
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/run/docker.sock
+sudo rm -rf /var/lib/containerd
+sudo rm -r ~/.docker
