@@ -24,28 +24,16 @@ tmux
 sudo apt install net-tools
 route -n
 
-# downloading file in background
-wget -b <file>
-
-# Install The Silver Searcher
-sudo apt install silversearcher-ag
-
 # Install GNOME Tweak Tool
 sudo apt update
 sudo add-apt-repository universe
 sudo apt install gnome-tweaks
 gnome-tweaks
 
-# Install Google Chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo apt install ./google-chrome-stable_current_amd64.deb
-
-# Install Microsoft Edge Browser
+# Install ZSH Shell
 sudo apt update
-sudo apt install software-properties-common apt-transport-https wget
-wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
-sudo apt install microsoft-edge-dev
+sudo apt install zsh -y
+chsh -s $(which zsh)
 
 # Installing Git
 sudo apt update
@@ -65,6 +53,24 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code
+
+# Install Google Chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
+
+# Install Brave Browser
+sudo apt install curl
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+
+# Install Microsoft Edge Browser
+sudo apt update
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
+sudo apt install microsoft-edge-dev
 
 # Install Boxes
 sudo apt install gnome-boxes
