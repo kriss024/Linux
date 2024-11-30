@@ -69,19 +69,21 @@ sudo netstat -tulpn
 sudo apt update
 sudo apt install openssh-server
 ssh -V
-
 sudo service ssh status
-sudo ufw allow ssh
 
-# 3 Check Firewall Status
-sudo ufw enable
-sudo ufw allow 22
-sudo ufw allow http
-sudo ufw allow https
+# 3 Firewalls
+# ufw by default is initially disabled.
+sudo nano /etc/default/ufw
+IPV6=yes
 
-# Alternatively, you can reset the firewall configuration to the default rules.
+# To set the default UFW incoming policy to deny, run:
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
+sudo ufw allow OpenSSH
+sudo ufw allow ssh
+
+# Enabling UFW
+sudo ufw enable
 
 sudo ufw status
 sudo ufw status verbose
