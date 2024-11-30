@@ -84,12 +84,18 @@ sudo ufw allow ssh
 
 # Enabling UFW
 sudo ufw enable
-
 sudo ufw status
+
+# Remember, once UFW enabled, it runs across system reboots too. 
+# We can verify that easily as follows using the systemctl command:
+sudo systemctl status ufw.service
+
 sudo ufw status verbose
 sudo ufw status numbered
 sudo ufw app list
 sudo ufw app info Samba
+
+sudo ufw reload
 
 # How to Shut Down Ubuntu
 sudo shutdown now
