@@ -33,6 +33,13 @@ bash -c 'date && cal'
 # Show calendar
 cal
 
+# Downloading file in background
+wget -b <file>
+
+# Copy file via scp
+scp bruszewski@hdp-en01.fortisbank.com.pl:/metadata/usr_home/bruszewski/projekty/110_pi_unsec_score/2_noicahe.pkl  ./2_noicahe.pkl
+scp ailab-hive-env.tar.gz bruszewski@rhelcxd-5062:/home/bruszewski/Work
+
 # Find all files in current and subfolders based on wildcard matching
 find . -name "*.sh"
 
