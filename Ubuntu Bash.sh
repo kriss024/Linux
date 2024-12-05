@@ -33,7 +33,7 @@ bash -c 'date && cal'
 # Show calendar
 cal
 
-# Directory symlink
+# Symlink for directory
 ln -s /home/user/documents/project_files /home/user/my_project
 
 # Downloading file in background
