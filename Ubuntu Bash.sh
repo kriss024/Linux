@@ -33,6 +33,9 @@ bash -c 'date && cal'
 # Show calendar
 cal
 
+# Directory symlink
+ln -s /home/user/documents/project_files /home/user/my_project
+
 # Downloading file in background
 wget -b <file>
 
