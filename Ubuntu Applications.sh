@@ -72,20 +72,20 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
 sudo apt install microsoft-edge-dev
 
-# Install KVM
+# Install QEMU/KVM
 sudo apt update
-sudo kvm-ok
-sudo apt install cpu-checker
-sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils -y
+sudo apt install -y bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm
 
-sudo adduser [username] libvirt
-sudo adduser [username] kvm
+kvm-ok
 
-sudo virsh list --all
+sudo adduser $USER libvirt
+sudo adduser $USER kvm
 
 sudo systemctl status libvirtd
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
 
-sudo systemctl enable --now libvirtd
+virsh list --all
 
 # Install Boxes
 sudo apt install gnome-boxes
