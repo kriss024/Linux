@@ -72,18 +72,18 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
 sudo apt install microsoft-edge-dev
 
-# Install QEMU/KVM
+# Installing Qemu and KVM virtualization
 sudo apt update
 sudo apt install -y bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm
 
 kvm-ok
 
-sudo adduser $USER libvirt
-sudo adduser $USER kvm
+sudo usermod -aG kvm $USER
+sudo usermod -aG kvm $USER
 
-sudo systemctl status libvirtd
-sudo systemctl enable libvirtd
+sudo systemctl enable --now libvirtd
 sudo systemctl start libvirtd
+sudo systemctl status libvirtd
 
 virsh list --all
 
