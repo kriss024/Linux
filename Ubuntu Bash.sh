@@ -2,12 +2,17 @@
 # Ctrl + Alt + F3 - to the Command Line Interface (CLI)
 # Ctrl + Alt + F2 - to the Graphical User Interface (GUI)
 # Use Control + L to clear the screen and Control + D to exit
+# Use Ctrl + Shift + V to paste into a terminal
 
 # Show bash history
 history
 
 # Search Bash shell command history
 history | grep "stuff"
+
+# List all environment variables
+printenv
+printenv | grep -E -w 'HOME|PWD|USER'
 
 # Run a Linux Command in the Background
 # Here the output of the ping command is redirected to the output.log file. You can replace it with /dev/null if you want to discard the result. 
