@@ -82,8 +82,3 @@ ssh username@linux-server-ip
 
 # Or if you configured the config file:
 ssh linux-server
-
-# A quick GitLab SSH key configuration
-ssh-keygen -t ed25519
-cat ~/.ssh/id_ed25519.pub | clip
-ssh -T git@github.com
