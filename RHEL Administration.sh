@@ -1,14 +1,7 @@
-# Set up first
-touch ~/.bash_aliases
+# Listing an installation gropinstall package collections on Redhat Linux
+yum grouplist
 
-# Then, make sure that this code appears in your ~/.bashrc file:
-# User specific aliases and functions
-if [ -e $HOME/.bash_aliases ]; then
-    source $HOME/.bash_aliases
-fi
+yum grouplist hidden
 
-# Creating Bash Aliases
-alias gh='history|grep'
-
-# Here’s an example of how to use it:
-gh bash
+# To install the packages under a specific group execute the command:
+yum groupinstall "KDE"
