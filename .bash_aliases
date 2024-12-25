@@ -33,6 +33,7 @@ alias t='touch'
 alias j='jobs -l'
 alias mkdir='mkdir -p'
 alias edit='tilde $1'
+# or edit='mcedit $1'
 
 # Clipboard management using xsel
 alias pbcopy='xsel --clipboard --input'
