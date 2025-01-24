@@ -10,7 +10,26 @@ sudo systemctl enable ssh --now
 sudo systemctl start ssh
 sudo systemctl status ssh.service
 
-# SSH Configuration
+# Configure two Linux machines using SSH keys
+# Generate the key on the client machine:
+ssh-keygen -t ecdsa
+
+# Verify the fingerprint of the key on the client machine:
+cat ~/.ssh/ecdsa.pub
+
+# Install key on the server machine
+ssh-copy-id user@<linux-server-ip>
+
+# Check the key on the server machine
+cat ~/.ssh/authorized_keys
+
+# Back to the client machine and connect to the server machine
+ssh 'user@<linux-server-ip>'
+
+# Run command on the server machine
+ssh user@<linux-server-ip> 'ls -la'
+
+# SSH Configuration across Linux and Windows
 # Creating Host Keys on Server
 # ssh-keygen
 mkdir -p ~/.ssh
