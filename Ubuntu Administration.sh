@@ -121,9 +121,9 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1920x1080"
 
 sudo update-grub
 
-# Ubuntu 18.04: Change to dark theme on GNOME3
-sudo apt install gnome-tweak-tool
-gnome-tweaks
+# Installing GNOME Shell Extensions
+sudo apt install gnome-tweaks
+sudo apt install gnome-shell-extensions
 # Change "Applications" to "Adwaita-dark" at "Themes" of "Appearance".
 
 # Install and Configure Samba
