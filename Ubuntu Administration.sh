@@ -123,8 +123,10 @@ sudo update-grub
 
 # Installing GNOME Shell Extensions
 sudo apt-get update
-sudo apt install gnome-shell-extension-manager
+sudo apt install gnome-tweak-tool
+gnome-tweaks
 # Change "Applications" to "Adwaita-dark" at "Themes" of "Appearance".
+sudo apt install gnome-shell-extension-manager
 
 # Install and Configure Samba
 sudo apt update
