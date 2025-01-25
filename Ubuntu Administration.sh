@@ -122,8 +122,8 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1920x1080"
 sudo update-grub
 
 # Installing GNOME Shell Extensions
-sudo apt install gnome-tweaks
-sudo apt install gnome-shell-extensions
+sudo apt-get update
+sudo apt install gnome-shell-extension-manager
 # Change "Applications" to "Adwaita-dark" at "Themes" of "Appearance".
 
 # Install and Configure Samba
