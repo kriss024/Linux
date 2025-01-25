@@ -96,13 +96,21 @@ cd work
 # Create a file with .sh extension.
 touch hello_world.sh
 
+# Make the script executable with command chmod +x <fileName>.
+chmod +x hello_world.sh
+
+# Run the script using ./<fileName>.
+./hello_world.sh
+
 # Write the script in the file using an editor.
 #!/bin/bash
-echo "Hello $USER"
-echo "Today is $(date)"
-echo "Today is "`date`
-NOW=$(date)
-echo $NOW
+# Define the source and destination directories
+source_dir="/path/to/source"
+destination_dir="/path/to/destination"
+# Copy the files from the source directory to the destination directory
+cp -R $source_dir $destination_dir
+# Log the results of the backup
+echo "Backup complete. $(date)" >> /var/log/backup.log
 
 # Assign values to shell variables
 varName='someValue'
@@ -119,12 +127,6 @@ export Variable="value"
 echo $Variable
 # Displays all environment variables
 env
-
-# Make the script executable with command chmod +x <fileName>.
-chmod +x hello_world.sh
-
-# Run the script using ./<fileName>.
-./hello_world.sh
 
 # The Pipe is a command in Linux that lets you use two or more commands such that output of one command serves as input to the next.
 # In short, the output of each process directly as input to the next one like a pipeline.
