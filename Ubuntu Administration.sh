@@ -7,8 +7,9 @@ sudo apt update && sudo apt upgrade -y
 sudo apt dist-upgrade -y
 
 # In order to remove all locally downloaded deb packages and all other apt-get caches, execute the below command.
-sudo apt-get autoremove -y
-sudo apt-get clean -y
+sudo apt-get autoclean
+sudo apt-get clean
+sudo apt-get autoremove
 
 # Remove Old Kernels (If No Longer Required)
 sudo apt-get autoremove --purge
@@ -18,6 +19,9 @@ sudo apt update
 sudo apt install lsb-release -y
 sudo apt install software-properties-common curl apt-transport-https ca-certificates -y
 sudo apt install build-essential manpages-dev -y
+
+# Installing Synaptic Package Manager 
+sudo apt-get install synaptic
 
 # Installing Intel microcode firmware
 sudo apt install intel-microcode
