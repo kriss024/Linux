@@ -32,6 +32,8 @@ gnome-tweaks
 
 sudo apt install -y gnome-shell-extension-manager
 
+sudo apt install gnome-weather
+
 # Install ZSH Shell
 sudo apt update
 sudo apt install zsh -y
