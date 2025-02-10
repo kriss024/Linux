@@ -30,6 +30,8 @@ sudo add-apt-repository universe
 sudo apt install gnome-tweaks
 gnome-tweaks
 
+sudo apt install -y gnome-shell-extension-manager
+
 # Install ZSH Shell
 sudo apt update
 sudo apt install zsh -y
