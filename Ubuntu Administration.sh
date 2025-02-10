@@ -4,7 +4,14 @@ passwd #changes passwords for user accounts
 
 # 1 Update Ubuntu Linux
 sudo apt update && sudo apt upgrade -y
-sudo apt dist-upgrade -y
+
+# Upgrade all the packages to the latest version
+sudo apt-get update
+sudo apt-get dist-upgrade
+
+# Upgrades to new Ubuntu versions/releases
+sudo do-release-upgrade -d
+sudo do-release-upgrade
 
 # In order to remove all locally downloaded deb packages and all other apt-get caches, execute the below command.
 sudo apt-get autoclean
@@ -131,6 +138,8 @@ sudo apt install gnome-tweak-tool
 gnome-tweaks
 # Change "Applications" to "Adwaita-dark" at "Themes" of "Appearance".
 sudo apt install gnome-shell-extension-manager
+
+
 
 # Install and Configure Samba
 sudo apt update
