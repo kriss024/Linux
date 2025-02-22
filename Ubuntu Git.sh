@@ -28,6 +28,7 @@ git pull - pobieranie na dysk brancha z repozytorium zdalnego, jeśli wcześniej
 git clone -b <branchname> <remote-repo-url> - skopiowanie wybranego brancha
 git branch -f <new_local_branch_name> origin/remote_branch_name - pobranie wybranego brancha zdalnego
 git checkout <new_local_branch_name> - przejście na pobranego brancha
+git reset HEAD -- . - usunięcie plików z obszaru roboczego
 
 # Kilka komend, które mogą się okazać pomocne w codziennej pracy:
 git diff <file> - pokazanie zmian w danym pliku w formie tekstowej
