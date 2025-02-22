@@ -183,6 +183,9 @@ alias add-all='git add -A'
 # Add modified files in the current directory and subdirectories to the staging area.
 alias add-mod='git add -u'
 
+# Remove files from staging area
+alias nostaging='git reset HEAD -- .'
+
 # Commit changes to the repository.
 alias commit='git commit'
 
