@@ -205,3 +205,4 @@ alias restore='git fetch && git restore'
 # Create a new Git branch and switch to it.
 alias new-branch='git checkout -b $1 $2'
 alias switch='git checkout'
+alias switch-force='git checkout -f'
