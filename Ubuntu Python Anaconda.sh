@@ -98,6 +98,11 @@ flask run
 # Deactivate a virtual environment
 deactivate
 
+# Black code formatter
+pip install black
+
+black {source_file_or_directory}
+
 # ---------------------- Conda virtual environments
 
 # Check if Conda is up to date
