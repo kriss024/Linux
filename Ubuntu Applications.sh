@@ -83,7 +83,6 @@ sudo apt install -y bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu
 kvm-ok
 
 sudo usermod -aG kvm $USER
-sudo usermod -aG kvm $USER
 
 sudo systemctl enable --now libvirtd
 sudo systemctl start libvirtd
