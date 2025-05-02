@@ -140,7 +140,6 @@ gnome-tweaks
 sudo apt install gnome-shell-extension-manager
 
 
-
 # Install and Configure Samba
 sudo apt update
 sudo apt install samba
