@@ -139,6 +139,16 @@ gnome-tweaks
 # Change "Applications" to "Adwaita-dark" at "Themes" of "Appearance".
 sudo apt install gnome-shell-extension-manager
 
+# Installing Snap on Ubuntu Linux
+sudo apt update
+sudo apt install snapd
+
+# Optional - Enable Snap services
+sudo systemctl enable --now snapd.socket
+
+# Optional - Install a test Snap package
+snap install hello-world
+hello-world
 
 # Install and Configure Samba
 sudo apt update
