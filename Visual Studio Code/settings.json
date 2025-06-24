@@ -1,0 +1,17 @@
+{
+  "git.ignoreLegacyWarning": true,
+  "editor.minimap.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "python.terminal.activateEnvironment": true,
+  "workbench.startupEditor": "none",
+  "workbench.list.openMode": "doubleClick",
+  "workbench.editor.enablePreview": false,
+  "files.trimTrailingWhitespace": true,
+  "editor.defaultFormatter": "ms-python.isort",
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Andromeda",
+  "remote.autoForwardPortsSource": "hybrid"
+}
