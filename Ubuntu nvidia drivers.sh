@@ -17,8 +17,18 @@ sudo apt install -y nvidia-driver-570
  # Verify the driver installation.
  nvidia-smi
 
- # 3. Install CUDA Toolkit:
-sudo apt install -y cuda-toolkit-12-8
+# 3. Install CUDA Toolkit - download the .deb installer
+wget https://developer.download.nvidia.com/compute/cuda/12.5.0/local_installers/cuda-repo-ubuntu2404-12-5-local_12.5.0-1_amd64.deb
+
+# Install the .deb package:
+sudo dpkg -i cuda-repo-ubuntu2404-12-5-local_12.5.0-1_amd64.deb
+
+# Add the GPG key
+sudo cp /var/cuda-repo-ubuntu2404-12-5-local/cuda-*-keyring.gpg /usr/share/keyrings/
+
+# Install CUDA SDK:
+sudo apt update
+sudo apt install cuda-toolkit
 
 # To include all GDS packages:
-apt install nvidia-gds
+sudo apt install nvidia-gds
