@@ -8,6 +8,10 @@ sudo apt autoremove -y
 # Install necessary packages. 
 sudo apt install -y dkms linux-headers-$(uname -r) build-essential
 
+# List the recommended NVIDIA drivers
+sudo apt install ubuntu-drivers-common
+sudo ubuntu-drivers devices
+
 # 2. Install NVIDIA drivers:
 sudo apt install -y nvidia-driver-570
 
@@ -17,7 +21,7 @@ sudo apt install -y nvidia-driver-570
  # Verify the driver installation.
  nvidia-smi
 
-# 3. Install CUDA Toolkit - download the .deb installer
+# 3. Install CUDA Toolkit - Local Repository Installation
 wget https://developer.download.nvidia.com/compute/cuda/12.5.0/local_installers/cuda-repo-ubuntu2404-12-5-local_12.5.0-1_amd64.deb
 
 # Install the .deb package:
