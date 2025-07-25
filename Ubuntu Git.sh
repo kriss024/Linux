@@ -84,6 +84,12 @@ git remote -v
 # Wypchnięcie lokalnego repozytorium na GitHub
 git push origin main
 
+# Utworzenie nowego pustego branach'a bez historii i commit'ów
+git switch --orphan <local_branch>
+
+git commit -a -m "initial commit of <local_branch>" --allow-empty
+git push -u origin <local_branch>
+
 # Cheatsheet z komend Gita: 
 https://training.github.com/downloads/pl/github-git-cheat-sheet/
 https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
