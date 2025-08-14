@@ -203,8 +203,10 @@ alias pull-dev='git pull origin development'
 # Restore specific files or entire directories in the working directory.
 alias restore='git fetch && git restore'
 
-# Create a new Git branch and switch to it.
+# Create a new or copy branch and switch to it.
 alias copy-branch='git checkout -b'
 alias new-branch='git switch --orphan'
+
+# Switch to an already existing branch.
 alias switch='git checkout'
 alias switch-force='git checkout -f'
