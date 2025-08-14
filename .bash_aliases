@@ -29,10 +29,10 @@ alias r='reset'
 alias c='clear'
 alias h='history'
 alias hh='history | grep -hi $1'
-alias t='touch'
+alias t='touch $1'
 alias j='jobs -l'
 alias mkdir='mkdir -p'
-alias edit='mcedit $1'
+alias edit='mcedit'
 
 # Clipboard management using xsel
 alias pbcopy='xsel --clipboard --input'
@@ -204,8 +204,8 @@ alias pull-dev='git pull origin development'
 alias restore='git fetch && git restore'
 
 # Create a new or copy branch and switch to it.
-alias copy-branch='git checkout -b'
-alias new-branch='git switch --orphan'
+alias new-branch='git checkout -b'
+alias empty-branch='git switch --orphan'
 
 # Switch to an already existing branch.
 alias switch='git checkout'
