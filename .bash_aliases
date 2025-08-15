@@ -1,3 +1,6 @@
+# Jump back to the root directory
+alias root='cd /'
+
 # Directory Navigation
 alias ..='cd ..'
 alias ...='cd ../../'
@@ -34,12 +37,11 @@ alias j='jobs -l'
 alias mkdir='mkdir -p'
 alias edit='mcedit'
 
-# Clipboard management using xsel
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-
 # Colorize the grep command output.
 alias grep='grep --color=auto'
+
+# Search for a substring (e.g., "text") recursively in the current directory and its subdirectories
+alias sub-grep='grep -r $1 .'
 
 # List all currently running background jobs.
 alias jobs='jobs -l'
@@ -56,11 +58,9 @@ alias cp='cp -rf'
 # Delete a directory and its contents.
 alias rm='rm -rf'
 
-# Display disk space usage in human-readable format.
-alias df='df -h'
-
-# Summarize the total size of the current directory in human-readable format.
-alias dss='du -sh .'
+# Clipboard management using xsel
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
 
 # Show the current time.
 alias now='date +"%T"'
@@ -77,6 +77,12 @@ alias kill='kill -9'
 
 # Use htop for process management (if installed).
 alias top='htop'
+
+# Display disk space usage in human-readable format.
+alias df='df -h'
+
+# Summarize the total size of the current directory in human-readable format.
+alias dss='du -sh .'
 
 # Display system information and network configuration.
 alias meminfo='free -m -l -t'
@@ -142,7 +148,7 @@ alias tzip='unzip -t'
 # Extract files from a zip archive, e.g., unzip archive.zip.
 alias uzip='unzip'
 
-# ----------------- PYTHON ALIASES --------------------
+# Python enhancements
 alias ve='python3 -m venv ./venv'
 alias va='source ./venv/bin/activate'
 alias vd='deactivate'
@@ -152,13 +158,16 @@ alias pipins='pip install --no-cache-dir'
 alias pipfre='pip freeze > requirements.txt'
 alias pipinsreq='pip install -r requirements.txt'
 
-# ----------------- SPARK ALIASES --------------------
+# Jupyter Notebook shortcut
+alias nb='jupyter notebook'
+
+# Spark and Yarn enhancements
 alias sparklist="yarn application -list | grep -hi $(whoami) | awk '{print \$1, \$2, \$3, \$4, \$5, \$6}'"
 alias sparkkill='yarn application -kill'
 alias sparklog='view_yarn_logs() { yarn logs -applicationId "$1" -am 1 -log_files stdout; }; view_yarn_logs'
 alias sparkwipe="for app_id in \$(yarn application -list | grep -i \$(whoami) | awk -F '\t' '{print \$1}'); do yarn app -kill \$app_id; done "
 
-# ----------------- GIT ALIASES --------------------
+# GIT enhancements
 # Initialize an empty Git repository in the current directory.
 alias init='git init'
 
@@ -185,7 +194,7 @@ alias add-all='git add -A'
 alias add-mod='git add -u'
 
 # Remove files from staging area
-alias nostaging='git reset HEAD -- .'
+alias reset-stage='git reset HEAD -- .'
 
 # Commit changes to the repository.
 alias commit='git commit'
@@ -210,3 +219,6 @@ alias empty-branch='git switch --orphan'
 # Switch to an already existing branch.
 alias switch='git checkout'
 alias switch-force='git checkout -f'
+
+# Show last commit details
+alias last-log='git log -1 HEAD'
