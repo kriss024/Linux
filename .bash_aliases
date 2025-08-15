@@ -41,7 +41,7 @@ alias edit='mcedit'
 alias grep='grep --color=auto'
 
 # Search for a substring (e.g., "text") recursively in the current directory and its subdirectories
-alias sub-grep='grep -r $1 .'
+alias sub-grep='grep -ri $1 .'
 
 # List all currently running background jobs.
 alias jobs='jobs -l'
