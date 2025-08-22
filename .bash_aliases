@@ -15,7 +15,7 @@ alias -- -='cd -'
 
 # List Directory Contents
 # List with colorized output.
-alias ls='ls --color=auto'
+alias ls='ls -a -1'
 
 # Long listing format with hidden files.
 alias ll='ls -lah'
@@ -25,6 +25,13 @@ alias la='ls -A'
 
 # Show hidden files only.
 alias l.='ls -d .* --color=auto'
+
+# Windows-like experience
+alias copy="cp"
+alias rename="mv"
+alias md="mkdir"
+alias rd="rmdir"
+alias del="rm -i"
 
 # Usual Commands
 alias p='pwd'
@@ -107,6 +114,7 @@ alias wget='wget -c'
 alias curl='curl -L'
 
 # For Debian/Ubuntu based systems
+alias sup="sudo apt update && sudo apt upgrade -y"
 alias supdate='sudo apt update'
 alias supgrade='sudo apt update && sudo apt upgrade'
 alias sinstall='sudo apt install'
@@ -215,6 +223,7 @@ alias restore='git fetch && git restore'
 # Create a new or copy branch and switch to it.
 alias new-branch='git checkout -b'
 alias empty-branch='git switch --orphan'
+alias new-dev-branch='git checkout -b development'
 
 # Switch to an already existing branch.
 alias switch='git checkout'
