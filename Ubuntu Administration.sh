@@ -149,3 +149,12 @@ sudo systemctl enable --now snapd.socket
 # Optional - Install a test Snap package
 snap install hello-world
 hello-world
+
+# Installing Flatpak on Ubuntu Linux
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo apt install gnome-software-plugin-flatpak gnome-software
+
+# Install a Flatpak package
+flatpak install <remote-repo> <package-name>
+flatpak install flathub <package-name>
