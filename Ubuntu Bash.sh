@@ -15,7 +15,7 @@ printenv
 printenv | grep -E -w 'HOME|PWD|USER'
 
 # Run a Linux Command in the Background
-# Here the output of the ping command is redirected to the output.log file. You can replace it with /dev/null if you want to discard the result. 
+# Here the output of the ping command is redirected to the output.log file. You can replace it with /dev/null if you want to discard the result.
 # The 2>&1 tells Bash to redirect any errors to the same file. The final & signals Bash to run this command in the background.
 ping -c5 8.8.8.8 >output.log 2>&1 &
 
@@ -76,11 +76,11 @@ counter=1
 while true; do
     echo "Loop iteration $counter"
     # Your commands here
-	
-	# Pause for 10 minutes (600 seconds)
-    sleep 600  
 
-    counter=$((counter + 1)) 
+	# Pause for 10 minutes (600 seconds)
+    sleep 600
+
+    counter=$((counter + 1))
 
     if [ $counter -gt $iterations ]; then
         echo "Loop finished after $iterations iterations."

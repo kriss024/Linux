@@ -7,7 +7,7 @@ dnf install epel-release
 # Install liberation-fonts rpm package
 dnf install liberation-fonts
 
-# Flathub Applications 
+# Flathub Applications
 # https://flathub.org/apps
 
 # Yum is the Red Hat package manager
@@ -25,7 +25,7 @@ sudo yum check-update
 
 # Updating Security-Related Packages
 sudo yum update --security
-# or 
+# or
 sudo yum update-minimal --security
 
 # Clear cache after update
@@ -122,14 +122,9 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 # Install the latest version of code.
 sudo yum check-update
 sudo yum install code -y
-	
+
 # Start the VSCode
 code
-
-# Installing Podman Compose
-pip3 install podman-compose --user
-podman-compose up
-podman-compose down
 
 # Installing Python 3.9
 sudo yum install python39*

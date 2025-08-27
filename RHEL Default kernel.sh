@@ -24,7 +24,7 @@ sudo grubby --set-default vmlinuz-5.14.0-162.23.1.el9_1.x86_64
 sudo grubby --default-kernel
 # /boot/vmlinuz-5.14.0-70.13.1.el9_0.x86_64
 
-uname -r 
+uname -r
 # 5.14.0-70.13.1.el9_0.x86_64
 
 sudo grubby --default-index

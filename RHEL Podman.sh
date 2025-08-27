@@ -23,7 +23,7 @@ sudo apt install podman
 podman -v
 
 # 5. Set Podman registries conf
-# Edit Registry configuration file 
+# Edit Registry configuration file
 sudo nano /etc/containers/registries.conf
 
 [registries.search]
@@ -56,3 +56,8 @@ podman stop h2smediaa
 # To Start:
 podman start <container-id> or <name>
 podman stop h2smediaa
+
+# Installing Podman Compose
+pip3 install podman-compose --user
+podman-compose up
+podman-compose down

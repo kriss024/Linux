@@ -25,7 +25,7 @@ sudo nano /etc/samba/smb.conf
    writable = no
    guest ok = yes
    read only = yes
-   
+
 # Private share - authenticated users only
 [Private]
    comment = Samba on Ubuntu

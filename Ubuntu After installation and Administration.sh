@@ -27,7 +27,7 @@ sudo apt install lsb-release -y
 sudo apt install software-properties-common curl apt-transport-https ca-certificates -y
 sudo apt install build-essential manpages-dev -y
 
-# Installing Synaptic Package Manager 
+# Installing Synaptic Package Manager
 sudo apt-get install synaptic
 
 # Installing Intel microcode firmware
@@ -44,7 +44,7 @@ sudo apt install zip unzip
 sudo apt install rar unrar
 
 # Install Thunar File Manager
-sudo apt install thunar 
+sudo apt install thunar
 
 # Install Midnight Commander
 sudo apt update
@@ -97,7 +97,7 @@ sudo ufw allow ssh
 sudo ufw enable
 sudo ufw status
 
-# Remember, once UFW enabled, it runs across system reboots too. 
+# Remember, once UFW enabled, it runs across system reboots too.
 # We can verify that easily as follows using the systemctl command:
 sudo systemctl status ufw.service
 
