@@ -92,4 +92,6 @@ git push -u origin <local_branch>
 
 # Cheatsheet z komend Gita: 
 https://training.github.com/downloads/pl/github-git-cheat-sheet/
-https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
+https://www.gitkraken.com/learn/git/commands
+https://sandeeppant.medium.com/git-cheat-sheet-basic-intermediate-and-advanced-git-commands-cdd61c504974
+https://git-scm.com/docs
