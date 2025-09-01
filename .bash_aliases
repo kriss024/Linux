@@ -1,3 +1,4 @@
+### ALIASES ###
 # Jump back to the root directory
 alias root='cd /'
 
