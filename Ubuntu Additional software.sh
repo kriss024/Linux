@@ -20,6 +20,31 @@ tilde
 sudo apt-get install tmux
 tmux
 
+# Install Nemo File Manager
+sudo apt-get update
+sudo apt-get install nemo
+
+# -- 1. Create the .desktop file
+nano ~/.local/share/applications/nemo.desktop
+
+# -- 2. Paste this content
+[Desktop Entry]
+Name=Nemo
+Comment=Cinnamon file manager
+Exec=nemo %U
+Icon=folder
+Terminal=false
+Type=Application
+Categories=Utility;FileManager;
+MimeType=inode/directory;
+StartupNotify=true
+
+# -- 3. Make it executable
+update-desktop-database ~/.local/share/applications/
+
+# -- 4. Refresh GNOME
+update-desktop-database ~/.local/share/applications/
+
 # net-tools, the collection of base networking utilities
 sudo apt install net-tools
 route -n

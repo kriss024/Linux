@@ -30,9 +30,6 @@ sudo apt install build-essential manpages-dev -y
 # Installing Synaptic Package Manager
 sudo apt-get install synaptic
 
-# Installing Intel microcode firmware
-sudo apt install intel-microcode
-
 # Clipboard management
 sudo apt install xclip
 
@@ -42,9 +39,6 @@ sudo apt install tilix
 # Install Zip, Unzip, RAR and UnRAR
 sudo apt install zip unzip
 sudo apt install rar unrar
-
-# Install Thunar File Manager
-sudo apt install thunar
 
 # Install Midnight Commander
 sudo apt update
