@@ -32,7 +32,7 @@ alias copy="cp"
 alias rename="mv"
 alias md="mkdir"
 alias rd="rmdir"
-alias del="rm -i"
+alias del="rm -rf"
 
 # Usual Commands
 alias p='pwd'
@@ -42,7 +42,6 @@ alias h='history'
 alias hh='history | grep -hi $1'
 alias t='touch $1'
 alias j='jobs -l'
-alias mkdir='mkdir -p'
 alias edit='mcedit'
 
 # Colorize the grep command output.
@@ -58,6 +57,7 @@ alias jobs='jobs -l'
 alias where='which'
 
 # Create a directory and move into it.
+alias mkdir='mkdir -p'
 alias mkcd='mkcd(){ mkdir -p "$1"; cd "$1" }; mkcd'
 
 # Copy files recursively, overwriting existing files.
@@ -96,8 +96,9 @@ alias dss='du -sh .'
 alias meminfo='free -m -l -t'
 alias cpuinfo='lscpu'
 alias gpuinfo='inxi -G'
-alias driversinfo='lspci -k'
+alias driverinfo='lspci -k'
 alias diskinfo='df -h'
+alias blockinfo='lsblk -f'
 alias usbinfo='lsusb'
 alias osinfo='uname -a'
 alias ipinfo='curl ifconfig.me'
