@@ -73,6 +73,10 @@ git --version
 # https://github.com/shiftkey/desktop/releases/tag/release-2.0.4-linux1
 sudo apt install ./GitHubDesktop-linux-2.0.4-linux1.deb
 
+# Install GParted (Gnome Partition Editor)
+sudo apt update
+sudo apt install gparted
+
 # Install Visual Studio Code
 sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
