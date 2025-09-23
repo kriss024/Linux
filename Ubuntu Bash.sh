@@ -27,11 +27,12 @@ grep -rnw '/path/to/somewhere/' -e 'pattern'
 # -e is the pattern used during the search
 
 # Along with these, --exclude, --include, --exclude-dir flags could be used for efficient searching:
-
 # This will only search through those files which have .c or .h extensions:
 grep --include=\*.{c,h} -rnw '/path/to/somewhere/' -e "pattern"
 #This will exclude searching all the files ending with .o extension:
 grep --exclude=\*.o -rnw '/path/to/somewhere/' -e "pattern"
+# For directories it's possible to exclude one or more directories using the --exclude-dir parameter. For example, this will exclude the dirs dir1/, dir2/ and all of them matching *.dst/:
+grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/search/' -e "pattern"
 
 # Run a Linux Command in the Background
 # Here the output of the ping command is redirected to the output.log file. You can replace it with /dev/null if you want to discard the result.
