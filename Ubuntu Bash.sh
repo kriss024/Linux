@@ -14,6 +14,18 @@ history | grep "stuff"
 printenv
 printenv | grep -E -w 'HOME|PWD|USER'
 
+# Perform a case-insensitive search for the word in file
+grep -i 'string' output.log
+# or read all files under each directory
+grep -r 'string' .
+
+grep -rnw '/path/to/somewhere/' -e 'pattern'
+# -r or -R is recursive,
+# -n is line number, and
+# -w stands for match the whole word.
+# -l (lower-case L) can be added to just give the file name of matching files.
+# -e is the pattern used during the search
+
 # Run a Linux Command in the Background
 # Here the output of the ping command is redirected to the output.log file. You can replace it with /dev/null if you want to discard the result.
 # The 2>&1 tells Bash to redirect any errors to the same file. The final & signals Bash to run this command in the background.
@@ -59,11 +71,6 @@ tar -czvf file.tar.gz /path/to/dir
 
 # Extracting tar.gz file
 tar -xvf archive.tar.gz
-
-# Perform a case-insensitive search for the word in file
-grep -i 'string' output.log
-# or read all files under each directory
-grep -r 'string' .
 
 # Use the shell for doing math
 echo $((19*34))
