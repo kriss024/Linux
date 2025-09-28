@@ -233,3 +233,4 @@ alias switch-force='git checkout -f'
 
 # Show last commit details
 alias last-log='git log -1 HEAD'
+alias repo-log='git log --oneline'
