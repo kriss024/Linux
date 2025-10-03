@@ -173,9 +173,10 @@ alias nb='jupyter notebook'
 
 # Spark and Yarn enhancements
 alias sparklist="yarn application -list | grep -hi $(whoami) | awk '{print \$1, \$2, \$3, \$4, \$5, \$6}'"
+alias sparkstatus='yarn application -status'
 alias sparkkill='yarn application -kill'
 alias sparklog='view_yarn_logs() { yarn logs -applicationId "$1" -am 1 -log_files stdout; }; view_yarn_logs'
-alias sparkwipe="for app_id in \$(yarn application -list | grep -i \$(whoami) | awk -F '\t' '{print \$1}'); do yarn app -kill \$app_id; done "
+alias sparkwipe="for app_id in \$(yarn application -list | grep -i \$(whoami) | awk -F '\t' '{print \$1}'); do yarn app -kill \$app_id; done"
 
 # GIT enhancements
 # Initialize an empty Git repository in the current directory.
