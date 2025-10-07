@@ -64,9 +64,14 @@ ln -s /home/user/documents/project_files /home/user/my_project
 # Downloading file in background
 wget -b <file>
 
-# Copy file via scp
-scp bruszewski@hdp-en01.fortisbank.com.pl:/metadata/usr_home/bruszewski/projekty/110_pi_unsec_score/2_noicahe.pkl  ./2_noicahe.pkl
-scp ailab-hive-env.tar.gz bruszewski@rhelcxd-5062:/home/bruszewski/Work
+# Copy all from Local Location to Remote Location (Upload)
+scp -r /path/from/local username@hostname:/path/to/remote
+# To copy all from Remote Location to Local Location (Download)
+scp -r username@hostname:/path/from/remote /path/to/local
+# Custom Port where xxxx is custom port number
+scp -r -P xxxx username@hostname:/path/from/remote /path/to/local
+# Copy on current directory from Remote to Local
+scp -r username@hostname:/path/from/remote .
 
 # Find all files in current and subfolders based on wildcard matching
 find . -name "*.sh"
