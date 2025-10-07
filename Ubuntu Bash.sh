@@ -73,6 +73,14 @@ scp -r -P xxxx username@hostname:/path/from/remote /path/to/local
 # Copy on current directory from Remote to Local
 scp -r username@hostname:/path/from/remote .
 
+# Help:
+#-r Recursively copy all directories and files
+# Always use full location from /, Get full location/path by pwd
+# scp will replace all existing files
+# hostname will be hostname or IP address
+# if custom port is needed (besides port 22) use -P PortNumber
+# . - it means current working directory
+
 # Find all files in current and subfolders based on wildcard matching
 find . -name "*.sh"
 
