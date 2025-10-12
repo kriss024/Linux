@@ -40,7 +40,7 @@ alias r='reset'
 alias c='clear'
 alias h='history'
 alias hh='history | grep -hi $1'
-alias t='touch $1'
+alias t='touch'
 alias j='jobs -l'
 alias edit='mcedit'
 
@@ -66,15 +66,17 @@ alias cp='cp -rf'
 # Delete a directory and its contents.
 alias rm='rm -rf'
 
-# Clipboard management using xsel
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-
 # Show the current time.
 alias now='date +"%T"'
 alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
 alias dt='date +"%d-%m-%Y %T"'
+
+# Download a file from a website, resuming if interrupted.
+alias wget='wget -c'
+
+# Fetch data from a website.
+alias curl='curl -L'
 
 # Process Management
 # Enhanced process listing.
@@ -86,11 +88,8 @@ alias kill='kill -9'
 # Use htop for process management (if installed).
 alias top='htop'
 
-# Display disk space usage in human-readable format.
-alias df='df -h'
-
-# Summarize the total size of the current directory in human-readable format.
-alias dss='du -sh .'
+# Determine the total size of a specific directory in human-readable format.
+alias dir-size='du -sh'
 
 # Display system information and network configuration.
 alias meminfo='free -m -l -t'
@@ -109,11 +108,9 @@ alias portinfo='netstat -tulanp'
 alias tcpinfo='netstat -plnt'
 alias portsinfo='ss -tuln'
 
-# Download a file from a website, resuming if interrupted.
-alias wget='wget -c'
-
-# Fetch data from a website.
-alias curl='curl -L'
+# Clipboard management using xsel
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
 
 # For Debian/Ubuntu based systems
 alias sup="sudo apt update && sudo apt upgrade -y"
