@@ -233,3 +233,79 @@ alias switch-force='git checkout -f'
 # Show last commit details
 alias last-log='git log -1 HEAD'
 alias repo-log='git log --oneline'
+
+### DOCKER ###
+# Start a container
+alias dstart='docker start'
+
+# Stop a container
+alias dstop='docker stop'
+
+# Restart a container
+alias drestart='docker restart'
+
+# Remove a container
+alias drm='docker rm'
+
+# Inspect a container
+alias dinspect='docker inspect'
+
+# Show container logs (follow)
+alias dlogs='docker logs -f'
+
+# Stop all running containers
+alias dstop='docker stop $(docker ps -aq)'
+
+# Run a container and get an interactive shell
+alias drun='docker run -it'
+
+# Execute an interactive bash shell inside a running container (useful for debugging)
+alias dexec='docker exec -it'
+
+# Get running containers
+alias dps='docker ps'
+
+# Get all containers (running and stopped)
+alias dpsa='docker ps -a'
+
+# List all images
+alias dimages='docker images'
+
+# Remove image
+alias drmi='docker rmi'
+
+# Pull image from Docker Hub
+alias dpull='docker pull'
+
+# Push image to Docker Hub
+alias dpush='docker push'
+
+# Remove all unused images (be careful!)
+alias dirm='docker image prune'
+
+# Remove all unused images, containers, networks, and volumes
+alias dclean='docker system prune -af --volumes'
+
+# Start services in detached mode
+alias dcup='docker-compose up -d'
+
+# Start and rebuild services
+alias dcbuild='docker-compose up -d --build'
+
+# Stop and remove containers, networks
+alias dcdown='docker-compose down'
+
+# View compose logs
+alias dclogs='docker-compose logs -f'
+
+# Restart a specific service
+alias dcrestart='docker-compose restart'
+
+# Show disk usage by Docker (images, containers, volumes, cache)
+alias ddf='docker system df'
+
+# Show detailed disk usage
+alias ddfv='docker system df -v'
+
+# Get the IP address of a container
+alias dip='docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
