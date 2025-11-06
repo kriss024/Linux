@@ -1,3 +1,6 @@
+# Using the Bash interpreter in scripts
+#!/bin/bash
+
 # Top 50 Linux Commands
 ls - The most frequently used command in Linux to list directories
 pwd - Print working directory command in Linux
