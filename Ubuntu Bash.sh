@@ -4,6 +4,9 @@
 # Use Control + L to clear the screen and Control + D to exit
 # Use Ctrl + Shift + V to paste into a terminal
 
+# Using the Bash interpreter in scripts
+#!/bin/bash
+
 # Show bash history
 history
 
@@ -96,6 +99,11 @@ tar -xvf archive.tar.gz
 # Use the shell for doing math
 echo $((19*34))
 echo "scale=2; 9*3/((2*2)+1)" | bc
+
+a=10
+b=3
+sum=$((a + b))
+echo "Sum: $sum"
 
 # Basic loop with sleep
 iterations=100
