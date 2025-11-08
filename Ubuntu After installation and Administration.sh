@@ -152,3 +152,6 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # Install a Flatpak package
 flatpak install <remote-repo> <package-name>
 flatpak install flathub <package-name>
+
+# Visual Studio Code shortcut
+alias code='flatpak run com.visualstudio.code'
