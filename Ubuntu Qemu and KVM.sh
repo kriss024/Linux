@@ -1,10 +1,10 @@
 # Installing Qemu and KVM virtualization
 sudo apt update
-sudo apt install -y bridge-utils cpu-checker libvirt-clients libvirt-daemon qemu qemu-kvm
+sudo apt install -y bridge-utils cpu-checker libvirt-daemon-system libvirt-clients virt-manager qemu-system-x86 qemu-utils
 
 kvm-ok
 
-sudo usermod -aG kvm $USER
+sudo usermod -aG libvirt,kvm $USER
 
 sudo systemctl enable --now libvirtd
 sudo systemctl start libvirtd
