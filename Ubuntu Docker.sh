@@ -1,4 +1,5 @@
 # Docker and Docker Desktop install
+
 # Add Docker's official GPG key:
 sudo apt-get update
 sudo apt-get install ca-certificates curl
@@ -28,6 +29,9 @@ newgrp docker
 
 # Test Docker installation
 docker run hello-world
+
+# Log in to Docker Hub
+docker login
 
 # Docker uninstall
 sudo systemctl stop docker
