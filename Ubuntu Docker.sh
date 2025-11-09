@@ -16,16 +16,17 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
-sudo systemctl status docker
 # Start and Automate Docker
+sudo systemctl status docker
 sudo systemctl start docker
 sudo systemctl enable docker
 
 # Manage Docker as a non-root user
 sudo groupadd docker
 sudo usermod -aG docker $USER
+newgrp docker
 
-# Either do a "newgrp docker" or log out/in to activate the changes to groups.
+# Test Docker installation
 docker run hello-world
 
 # Docker uninstall
