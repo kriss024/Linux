@@ -73,6 +73,10 @@ alias nowtime=now
 alias nowdate='date +"%d-%m-%Y"'
 alias dt='date +"%d-%m-%Y %T"'
 
+# Clipboard management using xsel e.g. cat <file name> | pbcopy
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
 # Download a file from a website, resuming if interrupted.
 alias wget='wget -c'
 
@@ -108,10 +112,6 @@ alias netinfo='ifconfig'
 alias portinfo='netstat -tulanp'
 alias tcpinfo='netstat -plnt'
 alias portsinfo='ss -tuln'
-
-# Clipboard management using xsel
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
 
 # For Debian/Ubuntu based systems
 alias sup="sudo apt update && sudo apt upgrade -y"
