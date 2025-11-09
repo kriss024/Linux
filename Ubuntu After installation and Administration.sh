@@ -31,7 +31,7 @@ sudo apt install build-essential manpages-dev -y
 sudo apt-get install synaptic
 
 # Clipboard management
-sudo apt install xclip
+sudo apt install xsel
 
 # Install Tilix Terminal Emulator
 sudo apt install tilix
