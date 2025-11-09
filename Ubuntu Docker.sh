@@ -27,6 +27,9 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
 
+# Check Docker daemon status
+docker info
+
 # Test Docker installation
 docker run hello-world
 
