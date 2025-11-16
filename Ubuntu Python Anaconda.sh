@@ -51,7 +51,7 @@ pip install -r requirements.txt
 deactivate
 
 # Install Python Data Science Packages
-pip install requests cachetools six python-dateutil scipy numpy pandas scikit-learn scikit-image yellowbrick openpyxl statsmodels pyarrow tables seaborn matplotlib bokeh pydotplus ipython tqdm
+pip install requests cachetools six python-dateutil scipy numpy pandas scikit-learn scikit-image yellowbrick openpyxl statsmodels pyarrow seaborn matplotlib bokeh pydotplus ipython tqdm
 # In Linux: pip install xlrd
 pip install plotly kaleido
 pip install 'polars[all]'
