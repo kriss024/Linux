@@ -121,6 +121,9 @@ alias sinstall='sudo apt install'
 alias sremove='sudo apt remove'
 alias sclean='sudo apt autoremove && sudo apt clean'
 
+# Update all Flatpaks
+alias fup="flatpak update -y"
+
 # For Red Hat/Fedora systems
 alias dcheck='sudo dnf check-update'
 alias dupdate='sudo dnf update'
