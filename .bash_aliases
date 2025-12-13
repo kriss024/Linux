@@ -106,12 +106,10 @@ alias blockinfo='lsblk -f'
 alias usbinfo='lsusb'
 alias osinfo='uname -a'
 alias ipinfo='curl ifconfig.me'
-alias netinfo='ifconfig'
+alias netinfo='ip addr show'
 
 # Display information about network connections.
-alias portinfo='netstat -tulanp'
-alias tcpinfo='netstat -plnt'
-alias portsinfo='ss -tuln'
+alias portinfo='ss -tuln'
 
 # For Debian/Ubuntu based systems
 alias sup="sudo apt update && sudo apt upgrade -y"
