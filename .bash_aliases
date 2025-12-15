@@ -107,8 +107,7 @@ alias usbinfo='lsusb'
 alias osinfo='uname -a'
 alias ipinfo='curl ifconfig.me'
 alias netinfo='ip addr show'
-
-# Display information about network connections.
+alias routeinfo='ip route show'
 alias portinfo='ss -tuln'
 
 # For Debian/Ubuntu based systems
