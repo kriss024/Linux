@@ -101,3 +101,6 @@ ssh username@linux-server-ip
 
 # Or if you configured the config file:
 ssh linux-server
+
+# Copy ssh keys to client machine (use -i identity_file for other identities)
+ssh-copy-id user@server.com
