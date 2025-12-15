@@ -109,6 +109,7 @@ alias ipinfo='curl ifconfig.me'
 alias netinfo='ip addr show'
 alias routeinfo='ip route show'
 alias portinfo='ss -tuln'
+alias currconn='ss -tn | grep ESTABLISHED'
 
 # For Debian/Ubuntu based systems
 alias sup="sudo apt update && sudo apt upgrade -y"
