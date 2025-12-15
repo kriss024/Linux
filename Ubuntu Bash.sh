@@ -84,6 +84,12 @@ scp -r username@hostname:/path/from/remote .
 # if custom port is needed (besides port 22) use -P PortNumber
 # . - it means current working directory
 
+# Test if a port is open
+telnet google.com 80
+
+# Command to query DNS information
+dig google.com
+
 # Find all files in current and subfolders based on wildcard matching
 find . -name "*.sh"
 
