@@ -114,9 +114,8 @@ alias portinfo='ss -tuln'
 alias currconn='ss -tn | grep ESTABLISHED'
 
 # For Debian/Ubuntu based systems
-alias sup="sudo apt update && sudo apt upgrade -y"
-alias supdate='sudo apt update'
-alias supgrade='sudo apt update && sudo apt upgrade'
+alias supdate='sudo apt update -y'
+alias supgrade='sudo apt update -y && sudo apt upgrade -y'
 alias sinstall='sudo apt install'
 alias sremove='sudo apt remove'
 alias sclean='sudo apt autoremove && sudo apt clean'
