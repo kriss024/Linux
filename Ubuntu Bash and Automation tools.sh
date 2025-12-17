@@ -1,14 +1,3 @@
-# Switch between the CLI and GUI on a Linux
-# Ctrl + Alt + F3 (or F4, F5, F6)	Switch to a text console (CLI)
-# Ctrl + Alt + F2	Switch back to GUI
-# Tab	Auto-complete.
-# Ctrl + C	Kill/Stop the current running process immediately.
-# Ctrl + Z	Suspend/Pause the process (resume with fg for foreground or bg for background).
-# Ctrl + D	Close the terminal (same as typing exit).
-# Ctrl + L	Clear the screen (leaves your current line at the top).
-# Ctrl + Shift + C	Copy selected text.
-# Ctrl + Shift + V	Paste text.
-
 # Using the Bash interpreter in scripts
 #!/bin/bash
 
