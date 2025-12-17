@@ -28,11 +28,11 @@ alias la='ls -A'
 alias l.='ls -d .* --color=auto'
 
 # Windows-like experience
-alias copy="cp"
-alias rename="mv"
-alias md="mkdir"
-alias rd="rmdir"
-alias del="rm -rf"
+alias copy='cp'
+alias rename='mv'
+alias md='mkdir'
+alias rd='rmdir'
+alias del='rm -rf'
 
 # Usual Commands
 alias p='pwd'
@@ -121,7 +121,7 @@ alias sremove='sudo apt remove'
 alias sclean='sudo apt autoremove && sudo apt clean'
 
 # Update all Flatpaks
-alias fup="flatpak update -y"
+alias fupdate='flatpak update -y'
 
 # For Red Hat/Fedora systems
 alias dcheck='sudo dnf check-update'
