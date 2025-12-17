@@ -11,6 +11,11 @@ history | grep "stuff"
 printenv
 printenv | grep -E -w 'HOME|PWD|USER'
 
+# Command that allows you to execute a command periodically (Ctrl+C to stop watching)
+watch ls
+watch date
+watch -n 1 free -m
+
 # Perform a case-insensitive search for the word in file
 grep -i 'string' output.log
 # or read all files under each directory
