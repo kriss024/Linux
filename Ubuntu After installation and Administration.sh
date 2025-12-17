@@ -27,6 +27,9 @@ sudo apt install lsb-release -y
 sudo apt install software-properties-common curl apt-transport-https ca-certificates -y
 sudo apt install build-essential manpages-dev -y
 
+# Installing Remote Sync
+sudo apt install rsync
+
 # Installing Synaptic Package Manager
 sudo apt-get install synaptic
 
@@ -63,12 +66,6 @@ sudo fc-cache -f -v
 # Configure a network interface
 sudo apt install net-tools
 ifconfig
-
-# Checking IP Address
-ifconfig
-
-# In order to get a list of all TCP and UDP network services up-and-running by default in your Ubuntu server
-sudo netstat -tulpn
 
 # Ubuntu Linux install OpenSSH server
 sudo apt update
