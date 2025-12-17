@@ -64,6 +64,28 @@ cal
 # Symlink for directory
 ln -s /home/user/documents/project_files /home/user/my_project
 
+# Copying files from one folder to another on the same computer.
+rsync -avP ~/Documents/ /media/external_drive/Backup/
+# -a: Archive mode (keep permissions/dates).
+# -v: Verbose (show me files).
+# -P: Show progress bar.
+
+# Sending files from your computer to a server. You need SSH access to the server.
+rsync -avzP ~/WebProject/ user@192.168.1.50:/var/www/html/
+# -z: Compresses data (faster over the internet).
+
+# Downloading files from a server to your computer.
+rsync -avzP user@192.168.1.50:/var/www/html/ ~/LocalBackup/
+
+# Delete files in destination that are not in source (mirror)
+rsync -av --delete source/ destination/
+
+Before running a complex rsync (especially using --delete), before doing anything risky, ask rsync to pretend:.
+rsync -av --delete --dry-run source/ destination/
+
+# Copy only specific files, exclude others
+rsync -avP --include="*.jpg" --include="*.png" --exclude="*" /source/ /dest/
+
 # Downloading file in background
 wget -b <file>
 
