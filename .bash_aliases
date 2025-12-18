@@ -113,33 +113,6 @@ alias routeinfo='ip route show'
 alias portinfo='ss -tuln'
 alias currconn='ss -tn | grep ESTABLISHED'
 
-# For Debian/Ubuntu based systems
-alias supdate='sudo apt update'
-alias supgrade='sudo apt update && sudo apt upgrade -y'
-alias sinstall='sudo apt install'
-alias sremove='sudo apt remove'
-alias sclean='sudo apt autoremove && sudo apt clean'
-
-# Update all Flatpaks
-alias fupdate='flatpak update -y'
-
-# For Red Hat/Fedora systems
-alias dcheck='sudo dnf check-update'
-alias dupdate='sudo dnf update'
-alias dupgrade='sudo dnf update && sudo dnf upgrade'
-alias dinstall='sudo dnf install'
-alias dremove='sudo dnf remove'
-
-# For Yum-based systems
-alias ycheck='sudo yum check-update'
-alias yupdate='sudo yum update'
-alias yupgrade='sudo yum update && sudo yum upgrade'
-alias yinstall='sudo yum install'
-alias yremove='sudo yum remove'
-
-# Apply only security-related updates.
-alias ysecurityup='sudo yum --security update'
-
 # Creating a tar archive, e.g., tar -cvf archive.tar .
 alias tarc='tar -czvf'
 
@@ -158,7 +131,34 @@ alias tzip='unzip -t'
 # Extract files from a zip archive, e.g., unzip archive.zip.
 alias uzip='unzip'
 
-# Python enhancements
+### DEBIAN/UBUNTU SYSTEM UPDATE ###
+alias supdate='sudo apt update'
+alias supgrade='sudo apt update && sudo apt upgrade -y'
+alias sinstall='sudo apt install'
+alias sremove='sudo apt remove'
+alias sclean='sudo apt autoremove && sudo apt clean'
+
+# Update Flatpaks
+alias fupdate='flatpak update -y'
+
+### RED HAT/FEDORA SYSTEM UPDATE ###
+alias dcheck='sudo dnf check-update'
+alias dupdate='sudo dnf update'
+alias dupgrade='sudo dnf update && sudo dnf upgrade'
+alias dinstall='sudo dnf install'
+alias dremove='sudo dnf remove'
+
+# Yum-based system update
+alias ycheck='sudo yum check-update'
+alias yupdate='sudo yum update'
+alias yupgrade='sudo yum update && sudo yum upgrade'
+alias yinstall='sudo yum install'
+alias yremove='sudo yum remove'
+
+# Apply only security-related updates.
+alias ysecurityup='sudo yum --security update'
+
+### PYTHON ###
 alias ve='python3 -m venv ./venv'
 alias va='source ./venv/bin/activate'
 alias vd='deactivate'
@@ -171,7 +171,7 @@ alias pipinsreq='pip install -r requirements.txt'
 # Jupyter Notebook shortcut
 alias nb='jupyter notebook'
 
-# Spark and Yarn enhancements
+### APACHE SPARK AND YARN SESSION ###
 alias sparklist="yarn application -list | grep -hi $(whoami) | awk '{print \$1, \$2, \$3, \$4, \$5, \$6}'"
 alias sparkstatus='yarn application -status'
 alias sparkkill='yarn application -kill'
@@ -179,7 +179,7 @@ alias sparklog='view_yarn_logs() { yarn logs -applicationId "$1" -am 1 -log_file
 alias sparkwipe="for app_id in \$(yarn application -list | grep -i \$(whoami) | awk -F '\t' '{print \$1}'); do yarn app -kill \$app_id; done"
 alias yarntop='yarn top'
 
-# GIT enhancements
+### GIT ###
 # Initialize an empty Git repository in the current directory.
 alias init='git init'
 
