@@ -12,6 +12,9 @@
 # Using the Bash interpreter in scripts
 #!/bin/bash
 
+su - username - Log in as a different user
+exit - Return to the original user
+
 # Top 50 Linux Commands
 ls - The most frequently used command in Linux to list directories
 pwd - Print working directory command in Linux
