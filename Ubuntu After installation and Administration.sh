@@ -59,6 +59,9 @@ curl -s https://api.github.com/repos/microsoft/edit/releases/latest \
 
 sudo mv edit /usr/local/bin/edit
 edit
+# or Microsoft Edit with snap
+sudo apt update
+sudo apt install snapd
 
 # Installing Git
 sudo apt install git
