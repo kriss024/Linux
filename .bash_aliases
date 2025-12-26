@@ -42,8 +42,7 @@ alias h='history'
 alias hh='history | grep -hi $1'
 alias t='touch'
 alias j='jobs -l'
-alias edit='mcedit'
-# alias edit='gnome-text-editor'
+# alias edit='mcedit'
 
 # Colorize the grep command output.
 alias grep='grep --color=auto'
