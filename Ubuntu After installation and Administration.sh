@@ -50,6 +50,15 @@ sudo apt install mc
 # Tilde - Command Line Text Editors
 sudo apt install tilde
 tilde
+# or Microsoft Edit
+curl -s https://api.github.com/repos/microsoft/edit/releases/latest \
+| grep 'browser_download_url.*x86_64-linux-gnu.tar.zst' \
+| cut -d '"' -f 4 \
+| xargs -I {} wget -qO- {} \
+| unzstd | tar -xvf -
+
+sudo mv edit /usr/local/bin/edit
+edit
 
 # Installing Git
 sudo apt install git
