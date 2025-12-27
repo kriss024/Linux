@@ -311,3 +311,9 @@ alias ddfv='docker system df -v'
 
 # Get the IP address of a container
 alias dip='docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
+
+# Microsoft Edit shortcut
+# alias edit='msedit'
+
+# Visual Studio Code shortcut
+# alias code='flatpak run com.visualstudio.code'
