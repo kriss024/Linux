@@ -61,7 +61,10 @@ sudo mv edit /usr/local/bin/edit
 edit
 # or Microsoft Edit with snap
 sudo apt update
-sudo apt install snapd
+sudo snap install msedit
+
+# Microsoft Edit shortcut
+alias edit='msedit'
 
 # Installing Git
 sudo apt install git
