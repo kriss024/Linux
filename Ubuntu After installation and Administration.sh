@@ -63,9 +63,6 @@ edit
 sudo apt update
 sudo snap install msedit
 
-# Microsoft Edit shortcut
-alias edit='msedit'
-
 # Installing Git
 sudo apt install git
 
