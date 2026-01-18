@@ -9,6 +9,9 @@
 # Ctrl + Shift + C	Copy selected text.
 # Ctrl + Shift + V	Paste text.
 
+# [user@host ~]$ - a regular user
+# [root@host ~]# - the superuser, root
+
 # Using the Bash interpreter in scripts
 #!/bin/bash
 
