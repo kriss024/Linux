@@ -12,6 +12,9 @@
 # [user@host ~]$ - a regular user
 # [root@host ~]# - the superuser, root
 
+# && (AND operator) - executes the second command only if the first succeeds (exit status 0).
+# || (OR operator) - executes the second command only if the first fails (exit status non-zero).
+
 # Using the Bash interpreter in scripts
 #!/bin/bash
 
