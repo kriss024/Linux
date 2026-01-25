@@ -7,6 +7,7 @@ fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
+export HISTCONTROL=ignoreboth
 
 # User specific aliases and functions
 if [ -e $HOME/.bash_aliases ]; then
