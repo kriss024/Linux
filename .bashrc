@@ -7,7 +7,8 @@ fi
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
-export HISTCONTROL=ignoreboth
+export TERM="xterm-256color"                      # getting proper colors
+export HISTCONTROL=ignoreboth:erasedups			  # no duplicate entries
 
 # User specific aliases and functions
 if [ -e $HOME/.bash_aliases ]; then
