@@ -62,3 +62,30 @@ sudo grep "sshd" /var/log/messages
 
 # Combine with other tools
 sudo awk '/error|fail|critical/i' /var/log/messages
+
+# The cockpit-ws program is the web service component used for communication between the browser application and various configuration tools and services
+
+# Install Cockpit (if not already installed)
+sudo dnf install cockpit
+
+# Enable and start the cockpit.socket service
+sudo systemctl enable --now cockpit.socket
+
+# Configure the firewall to allow Cockpit traffic
+sudo firewall-cmd --add-service=cockpit --permanent
+sudo firewall-cmd --reload
+
+# Verify the service is running
+sudo systemctl status cockpit.socket
+```
+
+**5. Access Cockpit:**
+Open a web browser and navigate to:
+```
+https://<your-server-ip>:9090
+```
+or on the local machine:
+```
+https://localhost:9090
+
+
