@@ -1,6 +1,9 @@
 # Using the Bash interpreter in scripts
 #!/bin/bash
 
+# Display the user manual of any command
+man [command name]
+
 # Show bash history
 history
 
@@ -10,6 +13,9 @@ history | grep "stuff"
 # List all environment variables
 printenv
 printenv | grep -E -w 'HOME|PWD|USER'
+
+# Get kernel-release
+uname -r
 
 # Command that allows you to execute a command periodically (Ctrl+C to stop watching)
 watch ls
