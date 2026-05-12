@@ -3,4 +3,4 @@
 HardDisk/
     -> EFI System Partition (ESP) [512 MB, File system: fat32]
     -> Root Partition (mount point / ) [400GB, File system: ext4]
-    -> Home (mount point /home ) [553GB, File system: ext4]
+    -> Home (mount point /home ) [553GB, File system: ext4 or (xfs for server)]
