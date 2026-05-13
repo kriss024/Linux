@@ -146,6 +146,13 @@ b=3
 sum=$((a + b))
 echo "Sum: $sum"
 
+# Basic loop with dates
+dates=("1789-07-14" "1815-06-18" "1903-12-17" "1945-05-08" "1969-07-20" "1989-11-09" "2001-09-11" "2008-08-08" "2015-10-21")
+
+for date in "${dates[@]}"; do
+    echo "Iteration: $date"
+done
+
 # Basic loop with sleep
 iterations=100
 
