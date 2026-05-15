@@ -60,6 +60,9 @@ nohup ping -c5 8.8.8.8 >output.log 2>&1 &
 # Retrieve last 100 lines logs
 tail -100 output.log
 
+# To find the Process ID (PID) of a process run by nohup using the output.log
+lsof output.log
+
 # Read commands from string
 bash -c 'date && cal'
 
