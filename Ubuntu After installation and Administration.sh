@@ -23,9 +23,11 @@ sudo apt-get autoremove --purge
 
 # 2 Installing Additional Dependencies
 sudo apt update
-sudo apt install lsb-release -y
-sudo apt install software-properties-common curl apt-transport-https ca-certificates -y
-sudo apt install build-essential manpages-dev -y
+sudo apt install -y lsb-release
+sudo apt install -y linux-generic
+sudo apt install -y software-properties-common curl apt-transport-https ca-certificates
+sudo apt install -y build-essential automake bison cmake flex gcc-multilib gdb g++-multilib libelf-dev libltdl-dev m4 swig
+sudo apt install -y sysstat chrpath cifs-utils net-tools nfs-common pm-utils samba-common samba-libs 
 
 # Installing Remote Sync
 sudo apt install rsync
