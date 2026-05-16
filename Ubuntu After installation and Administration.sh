@@ -6,8 +6,8 @@ passwd #changes passwords for user accounts
 sudo apt update && sudo apt upgrade -y
 
 # Upgrade all the packages to the latest version
-sudo apt-get update
-sudo apt-get dist-upgrade
+sudo apt update
+sudo apt -y full-upgrade
 
 # Upgrades to new Ubuntu versions/releases
 sudo do-release-upgrade -d
