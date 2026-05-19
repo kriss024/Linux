@@ -133,7 +133,7 @@ alias uzip='unzip'
 ### DEBIAN/UBUNTU SYSTEM UPDATE ###
 alias supdate='sudo apt update'
 alias supgrade='sudo apt update && sudo apt upgrade -y'
-alias sfgrade='sudo apt update && sudo apt full-upgrade -y'
+alias sufgrade='sudo apt update && sudo apt full-upgrade -y'
 alias sinstall='sudo apt install'
 alias sremove='sudo apt remove'
 alias sclean='sudo apt autoremove && sudo apt clean'
