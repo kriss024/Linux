@@ -318,3 +318,6 @@ alias dip='docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
 
 # Sublime Text shortcut
 # alias subl='flatpak run com.sublimetext.three'
+
+# Microsoft Edit shortcut
+# alias edit='snap run msedit'
