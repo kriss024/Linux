@@ -138,8 +138,11 @@ alias sinstall='sudo apt install'
 alias sremove='sudo apt remove'
 alias sclean='sudo apt autoremove && sudo apt clean'
 
-# Update Flatpaks
+# Update Flatpaks applications
 alias fupdate='flatpak update -y'
+
+# Update Snap packages
+alias snupdate='sudo snap refresh'
 
 ### RED HAT/FEDORA SYSTEM UPDATE ###
 alias dcheck='sudo dnf check-update'
