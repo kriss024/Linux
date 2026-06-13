@@ -315,3 +315,6 @@ alias dip='docker inspect --format "{{ .NetworkSettings.IPAddress }}"'
 
 # Visual Studio Code shortcut
 # alias code='flatpak run com.visualstudio.code'
+
+# Sublime Text shortcut
+# alias subl='flatpak run com.sublimetext.three'
