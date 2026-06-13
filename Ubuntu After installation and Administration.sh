@@ -55,7 +55,7 @@ tilde
 
 # Microsoft Edit with snap
 sudo apt update
-sudo snap install msedit
+sudo snap install msedit --classic
 
 # Installing Git
 sudo apt install git
