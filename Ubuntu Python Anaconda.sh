@@ -1,29 +1,31 @@
-# In Linux: sudo apt-get update
-# In Linux: sudo apt-get install -y python3
-# In Linux: sudo apt install -y python3-pip
-# In Linux: sudo apt install -y python3-venv
-# In Linux: python3 --version
-# In RHEL: sudo dnf update
-# In RHEL: sudo dnf install python39*
-# In RHEL: sudo dnf install python3-pip 
-# In RHEL: sudo dnf install python3-venv
-# In RHEL: python --version
-# In RHEL: sudo alternatives --set python /usr/bin/python3.9
+# Python installation
+# In Debian: 
+sudo apt-get update
+sudo apt-get install -y python3
+sudo apt install -y python3-pip
+sudo apt install -y python3-venv
+python3 --version
+# In RHEL: 
+sudo dnf update
+sudo dnf install python39*
+sudo dnf install python3-pip 
+sudo dnf install python3-venv
+python --version
+sudo alternatives --set python /usr/bin/python3.9
 
 python --version
-# In Linux: whereis python3
+whereis python3
 
 # In your Command Prompt navigate to your project:
 cd your_project
 
 # Create an environment
-python -m venv venv
-# sudo apt install python3.10-venv
-# In Linux: python3 -m venv ./venv
+sudo apt install python3.10-venv
+python3 -m venv ./venv
 
 # Activating a virtual environment
-venv\Scripts\activate.bat
-# In Linux: source .venv/bin/activate
+source .venv/bin/activate
+# In MS-Windows: venv\Scripts\activate.bat
 
 # The PYTHONPATH variable has a value that is a string with a list of directories that Python should add to the sys.path directory list.
 # In Linux: export PYTHONPATH=/home/my_user/code
@@ -31,8 +33,8 @@ venv\Scripts\activate.bat
 # In Linux: echo $PYTHONPATH
 
 # Upgrade Pip to the latest version
-python -m pip install --upgrade pip
-# In Linux: python3 -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
+pip install -U setuptools wheel
 
 pip list
 
@@ -42,7 +44,7 @@ pip search <package name>
 # List all versions of a package that's available?
 pip index versions <package name>
 
-# Install packages from requirements.txt
+#  Create a virtual environment and install packages from requirements.txt
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install --upgrade pip
@@ -52,7 +54,7 @@ deactivate
 
 # Install Python Data Science Packages
 pip install requests cachetools six python-dateutil scipy numpy pandas scikit-learn scikit-image yellowbrick openpyxl statsmodels pyarrow seaborn matplotlib bokeh pydotplus ipython tqdm
-# In Linux: pip install xlrd
+pip install xlrd
 pip install plotly
 pip install 'polars[all]'
 pip install pingouin sidetable shap optbinning feature-engine
@@ -66,22 +68,13 @@ pip install --upgrade jupyter
 
 jupyter notebook --notebook-dir=/home/notebooks --ip='*' --port=8888 --no-browser --allow-root
 
+# Black code formatter
+pip install black
+
+black {source_file_or_directory}
+
 # Generate a requirements file
 pip freeze > requirements.txt
-
-# Guide to Setting up PyHive with python3
-sudo yum install -y gcc
-sudo yum install -y gcc-c++
-
-# sudo apt-get install libsasl2-dev
-
-yum search python3 | grep devel
-yum search sasl | grep devel
-
-sudo yum install -y python36-devel.x86_64
-sudo yum install -y cyrus-sasl-devel.x86_64
-
-pip install thrift sasl thrift_sasl pyhive
 
 # Install Flask
 pip install --upgrade pip setuptools wheel
@@ -97,11 +90,6 @@ flask run
 
 # Deactivate a virtual environment
 deactivate
-
-# Black code formatter
-pip install black
-
-black {source_file_or_directory}
 
 # ---------------------- Conda virtual environments
 
@@ -155,14 +143,10 @@ conda install ipykernel notebook
 # Adding Virtual Environment in Jupyter Notebook
 conda activate <env_name>
 python -m ipykernel install --user --name=<env_name>
-# In Linux: jupyter notebook --notebook-dir=/home/notebooks --ip='*' --port=8888 --no-browser --allow-root
+jupyter notebook --notebook-dir=/home/notebooks --ip='*' --port=8888 --no-browser --allow-root
 
 # To remove the Virtual Environment from Jupyter
 jupyter kernelspec uninstall <env_name>
-
-# Guide to Setting up PyHive with python3
-conda install pyhive sasl
-pip install sqlalchemy===1.3.0
 
 # conda-pack is a command line tool for creating archives of conda environments that can be installed on other systems and locations.
 conda install conda-pack
@@ -183,7 +167,7 @@ mkdir -p environment
 tar -xzf conda_env.tar.gz -C environment
 
 # Sending to destination
-scp conda_env.tar.gz bruszewski@<hostname>:/home/bruszewski/work
+scp conda_env.tar.gz user@<hostname>:/home/user/work
 
 # Use python without activating or fixing the prefixes. Most python
 # libraries will work fine, but things that require prefix cleanups
