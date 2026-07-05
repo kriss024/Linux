@@ -139,7 +139,7 @@ alias sremove='sudo apt remove'
 alias sclean='sudo apt autoremove && sudo apt clean'
 
 # Update Flatpaks applications
-alias fupdate='flatpak update -y'
+alias fpupdate='flatpak update -y'
 
 # Update Snap packages
 alias snupdate='sudo snap refresh'
