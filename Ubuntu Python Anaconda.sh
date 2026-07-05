@@ -231,3 +231,30 @@ rm -rf ~/anaconda3             # removes the entire anaconda directory
 
 rm -rf ~/.anaconda_backup      # anaconda clean creates a back_up of files/dirs, remove it
                                # (conda list; cmd shouldn't respond after the clean up)
+
+# ---------------------- uv - package and project manager
+
+# Installing uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+# or
+wget -qO- https://astral.sh/uv/install.sh | sh
+
+# Upgrading uv
+uv self update
+
+# Installing a specific version
+uv python install 3.12
+
+# Upgrade all uv-managed Python versions
+uv python upgrade
+
+# Running a script
+uv run main.py
+
+# Viewing Python installations
+uv python list
+
+# Creating a new virtual environment
+uv venv
+# or
+uv venv --python 3.12
