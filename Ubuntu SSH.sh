@@ -39,6 +39,9 @@ ssh-keygen
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/id_rsa
 chmod 644 ~/.ssh/id_rsa.pub
+# Also if exists:
+chmod 600 ~/.ssh/config
+chmod 600 ~/.ssh/authorized_keys
 
 # Optional syntax for advance users
 ssh-keygen -t rsa -b 4096 -f .ssh/s_home -C "serwer123456"
@@ -79,7 +82,7 @@ scp remote_username@10.10.0.2:~/.ssh/id_rsa .
 # User's configuration file (~/.ssh/config)
 cd ~/.ssh
 touch config
-chmod 644 ~/.ssh/config
+chmod 600 ~/.ssh/config
 
 # Save file in C:\Users\<username>\.ssh\config
 chmod 600 ~/.ssh/<private key>
