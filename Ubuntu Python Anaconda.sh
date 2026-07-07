@@ -16,15 +16,14 @@ sudo alternatives --set python /usr/bin/python3.9
 python --version
 whereis python3
 
-# In your Command Prompt navigate to your project:
-cd your_project
+# Install the venv module to create Python virtual environments.
+sudo apt install python3.10-venv
 
 # Create an environment
-sudo apt install python3.10-venv
 python3 -m venv ./venv
 
 # Activating a virtual environment
-source .venv/bin/activate
+source ./venv/bin/activate
 # In MS-Windows: venv\Scripts\activate.bat
 
 # The PYTHONPATH variable has a value that is a string with a list of directories that Python should add to the sys.path directory list.
@@ -46,7 +45,7 @@ pip index versions <package name>
 
 #  Create a virtual environment and install packages from requirements.txt
 python3 -m venv .venv
-source .venv/bin/activate
+source ./venv/bin/activate
 python3 -m pip install --upgrade pip
 pip install -U setuptools wheel
 pip install -r requirements.txt
