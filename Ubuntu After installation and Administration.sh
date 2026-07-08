@@ -136,7 +136,7 @@ gnome-tweaks
 # Change "Applications" to "Adwaita-dark" at "Themes" of "Appearance".
 sudo apt install gnome-shell-extension-manager
 
-# Installing Snap on Ubuntu Linux
+# Installing Snap
 sudo apt update
 sudo apt install snapd
 
@@ -147,8 +147,14 @@ sudo systemctl enable --now snapd.socket
 snap install hello-world
 hello-world
 
-# Installing Flatpak on Ubuntu Linux
+# Installing Flatpak
 sudo apt install flatpak
 sudo apt install gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remotes
+
+# Installing AppImages
+sudo apt update 
+sudo apt install libfuse2t64
+chmod +x application.AppImage
+./application.AppImage
