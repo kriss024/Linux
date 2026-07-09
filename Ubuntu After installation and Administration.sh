@@ -105,27 +105,6 @@ sudo ufw app info Samba
 
 sudo ufw reload
 
-# How to Shut Down Ubuntu
-sudo shutdown now
-sudo reboot
-
-# To show details about your machine hostname run the following command.
-hostnamectl
-lsb_release -a
-free -m
-lscpu
-df -h
-
-# Display Linux distro version
-cat /etc/*-release
-
-# Installing GNOME Shell Extensions
-sudo apt-get update
-sudo apt install gnome-tweak-tool
-gnome-tweaks
-# Change "Applications" to "Adwaita-dark" at "Themes" of "Appearance".
-sudo apt install gnome-shell-extension-manager
-
 # Installing Snap
 sudo apt update
 sudo apt install snapd
