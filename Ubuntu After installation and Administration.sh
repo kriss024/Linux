@@ -119,16 +119,6 @@ df -h
 # Display Linux distro version
 cat /etc/*-release
 
-# Ubuntu Hyper-V Guest Display Resolution
-sudo nano /etc/default/grub
-
-# Change this line:
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
-# To this.
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=hyperv_fb:1920x1080"
-
-sudo update-grub
-
 # Installing GNOME Shell Extensions
 sudo apt-get update
 sudo apt install gnome-tweak-tool
