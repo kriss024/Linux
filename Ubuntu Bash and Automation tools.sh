@@ -4,6 +4,16 @@
 # Display the user manual of any command
 man [command name]
 
+# Display details about machine hostname
+hostnamectl
+lsb_release -a
+
+# Display Linux distro version
+cat /etc/*-release
+
+# Get kernel-release
+uname -r
+
 # Show bash history
 history
 
@@ -13,9 +23,6 @@ history | grep "stuff"
 # List all environment variables
 printenv
 printenv | grep -E -w 'HOME|PWD|USER'
-
-# Get kernel-release
-uname -r
 
 # Command that allows you to execute a command periodically (Ctrl+C to stop watching)
 watch ls
@@ -68,6 +75,10 @@ bash -c 'date && cal'
 
 # Show calendar
 cal
+
+# Shut Down or Reboot system
+sudo shutdown now
+sudo reboot
 
 # Symlink for directory
 ln -s /home/user/documents/project_files /home/user/my_project
