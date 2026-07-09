@@ -20,6 +20,24 @@ tilde
 sudo apt-get install tmux
 tmux
 
+# net-tools, the collection of base networking utilities
+sudo apt install net-tools
+route -n
+
+# Install ZSH Shell
+sudo apt update
+sudo apt install zsh -y
+chsh -s $(which zsh)
+
+# Installing Git
+sudo apt update
+sudo apt install git
+git --version
+
+# Install GParted (Gnome Partition Editor)
+sudo apt update
+sudo apt install gparted
+
 # Install Nemo File Manager
 sudo apt-get update
 sudo apt-get install nemo
@@ -44,38 +62,6 @@ update-desktop-database ~/.local/share/applications/
 
 # -- 4. Refresh GNOME
 update-desktop-database ~/.local/share/applications/
-
-# net-tools, the collection of base networking utilities
-sudo apt install net-tools
-route -n
-
-# Install GNOME Tweak Tool
-sudo apt update
-sudo add-apt-repository universe
-sudo apt install gnome-tweaks
-gnome-tweaks
-
-sudo apt install -y gnome-shell-extension-manager
-
-sudo apt install gnome-weather
-
-# Install ZSH Shell
-sudo apt update
-sudo apt install zsh -y
-chsh -s $(which zsh)
-
-# Installing Git
-sudo apt update
-sudo apt install git
-git --version
-
-# Install GitHub
-# https://github.com/shiftkey/desktop/releases/tag/release-2.0.4-linux1
-sudo apt install ./GitHubDesktop-linux-2.0.4-linux1.deb
-
-# Install GParted (Gnome Partition Editor)
-sudo apt update
-sudo apt install gparted
 
 # Install Visual Studio Code
 sudo apt-get install wget gpg
@@ -112,3 +98,10 @@ sudo apt install ./onlyoffice-desktopeditors_amd64.deb
 sudo add-apt-repository ppa:desdelinux/viewnior
 sudo apt-get update
 sudo apt-get install viewnior
+
+# Installing GNOME Shell Extensions
+sudo apt-get update
+sudo apt install gnome-tweak-tool
+gnome-tweaks
+# Change "Applications" to "Adwaita-dark" at "Themes" of "Appearance".
+sudo apt install gnome-shell-extension-manager
