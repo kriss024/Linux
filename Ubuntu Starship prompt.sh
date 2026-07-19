@@ -16,12 +16,3 @@ eval "$(starship init bash)"
 
 # Reload .bashrc settings
 source ~/.bashrc
-
-# Install Gnome Terminal
-# sudo apt-get install dconf-cli
-# git clone https://github.com/dracula/gnome-terminal
-# cd gnome-terminal
-# ./install.sh
-
-# Go to https://draculatheme.com/gtk
-# Wallpaper https://raw.githubusercontent.com/linuxdotexe/nordic-wallpapers/master/wallpapers/ign_astronaut.png

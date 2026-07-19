@@ -105,3 +105,12 @@ sudo apt install gnome-tweak-tool
 gnome-tweaks
 # Change "Applications" to "Adwaita-dark" at "Themes" of "Appearance".
 sudo apt install gnome-shell-extension-manager
+
+# Install Gnome Terminal
+sudo apt-get install dconf-cli
+git clone https://github.com/dracula/gnome-terminal
+cd gnome-terminal
+./install.sh
+
+# Go to https://draculatheme.com/gtk
+# Wallpaper https://raw.githubusercontent.com/linuxdotexe/nordic-wallpapers/master/wallpapers/ign_astronaut.png
