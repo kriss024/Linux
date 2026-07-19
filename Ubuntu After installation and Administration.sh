@@ -111,13 +111,11 @@ sudo apt install snapd
 
 # Optional - Enable Snap services
 sudo systemctl enable --now snapd.socket
-
-# Optional - Install a test Snap package
-snap install hello-world
-hello-world
+snap version
 
 # Installing Flatpak
 sudo apt install flatpak
 sudo apt install gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak remotes
+flatpak --version
