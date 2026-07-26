@@ -1,6 +1,3 @@
-# Using the Bash interpreter in scripts
-#!/bin/bash
-
 # Display the user manual of any command
 man [command name]
 
@@ -29,6 +26,11 @@ watch ls
 watch date
 watch -n 1 free -m
 
+# Searches for the text "search_string" inside the file sample.txt
+cat sample.txt | grep search_string
+# The better way:
+grep "search_string" sample.txt
+
 # Perform a case-insensitive search for the word in file
 grep -i 'string' output.log
 # or read all files under each directory
@@ -48,6 +50,10 @@ grep --include=\*.{c,h} -rnw '/path/to/somewhere/' -e "pattern"
 grep --exclude=\*.o -rnw '/path/to/somewhere/' -e "pattern"
 # For directories it's possible to exclude one or more directories using the --exclude-dir parameter. For example, this will exclude the dirs dir1/, dir2/ and all of them matching *.dst/:
 grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/search/' -e "pattern"
+
+# Find a file
+# find starting/path e.g. /var/www/ expression e.g. -name "*.html"
+find . -name tnsnames.ora
 
 # Run a Linux Command in the Background
 # Here the output of the ping command is redirected to the output.log file. You can replace it with /dev/null if you want to discard the result.
@@ -72,13 +78,6 @@ lsof output.log
 
 # Read commands from string
 bash -c 'date && cal'
-
-# Show calendar
-cal
-
-# Shut Down or Reboot system
-sudo shutdown now
-sudo reboot
 
 # Symlink for directory
 ln -s /home/user/documents/project_files /home/user/my_project
@@ -191,17 +190,19 @@ done
 cd ~
 cd work
 
-# Create a file with .sh extension.
+# Create a empty file with .sh extension.
 touch hello_world.sh
 
-# Make the script executable with command chmod +x <fileName>.
+# The first line should tell the shell which interpreter to use.
+#!/bin/bash
+echo "Hello, world!"
+
+# Make it executable
 chmod +x hello_world.sh
 
-# Run the script using ./<fileName>.
+# Run the script
 ./hello_world.sh
 
-# Write the script in the file using an editor.
-#!/bin/bash
 # Define the source and destination directories
 source_dir="/path/to/source"
 destination_dir="/path/to/destination"
@@ -225,12 +226,4 @@ export Variable="value"
 echo $Variable
 # Displays all environment variables
 env
-
-# The Pipe is a command in Linux that lets you use two or more commands such that output of one command serves as input to the next.
-# In short, the output of each process directly as input to the next one like a pipeline.
-# grep search_string
-cat sample.txt | grep search_string
-
-# Find a file
-# find starting/path e.g. /var/www/ expression e.g. -name "*.html"
 find . -name tnsnames.ora
