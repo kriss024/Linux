@@ -79,6 +79,8 @@ top - View active processes live with their system usage
 useradd and usermod - Add new user or change existing users data
 passwd - Create or update passwords for existing users
 cal - Show calendar
+find - Find a file
+file - List types of files
 
 awk	"Aho, Weinberger and Kernigan", Bell Labs, 1970s. Interpreted programming language for text processing.
 awk -F	(see above) + Set the field separator.
