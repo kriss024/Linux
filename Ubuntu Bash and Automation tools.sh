@@ -55,6 +55,18 @@ grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/search/' -e "pattern"
 # find starting/path e.g. /var/www/ expression e.g. -name "*.html"
 find . -name tnsnames.ora
 
+# Find all files in current and subfolders based on wildcard matching
+find . -name "*.sh"
+
+# Used to list types of all the files
+file *
+
+# Compress an entire directory
+tar -czvf file.tar.gz /path/to/dir
+
+# Extracting tar.gz file
+tar -xvf archive.tar.gz
+
 # Run a Linux Command in the Background
 # Here the output of the ping command is redirected to the output.log file. You can replace it with /dev/null if you want to discard the result.
 # The 2>&1 tells Bash to redirect any errors to the same file. The final & signals Bash to run this command in the background.
@@ -137,18 +149,6 @@ ifconfig
 
 # In order to get a list of all TCP and UDP network services up-and-running by default in linux
 ss -tulpn
-
-# Find all files in current and subfolders based on wildcard matching
-find . -name "*.sh"
-
-# Used to list types of all the files
-file *
-
-# Compress an entire directory
-tar -czvf file.tar.gz /path/to/dir
-
-# Extracting tar.gz file
-tar -xvf archive.tar.gz
 
 # Use the shell for doing math
 echo $((19*34))
