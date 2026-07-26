@@ -12,6 +12,9 @@
 # [user@host ~]$ - a regular user
 # [root@host ~]# - the superuser, root
 
+# > (Redirect operator) - sends stdout to a file, overwriting the existing file
+# >> (Append operator) - sends stdout to a file, appending to the end of the existing file
+
 # && (AND operator) - executes the second command only if the first succeeds (exit status 0).
 # || (OR operator) - executes the second command only if the first fails (exit status non-zero).
 # | (Pipes operator) - sends stdout of one command to stdin of another
