@@ -26,6 +26,8 @@ su - username - Log in as a different user
 exit - Return to the original user
 
 # Top 50 Linux Commands
+sudo shutdown now - Shut down the system
+sudo reboot - Reboot the system
 ls - The most frequently used command in Linux to list directories
 pwd - Print working directory command in Linux
 cd - Linux command to navigate through directories
@@ -76,6 +78,7 @@ whatis - Find what a command is used for
 top - View active processes live with their system usage
 useradd and usermod - Add new user or change existing users data
 passwd - Create or update passwords for existing users
+cal - Show calendar
 
 awk	"Aho, Weinberger and Kernigan", Bell Labs, 1970s. Interpreted programming language for text processing.
 awk -F	(see above) + Set the field separator.
