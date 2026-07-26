@@ -226,4 +226,3 @@ export Variable="value"
 echo $Variable
 # Displays all environment variables
 env
-find . -name tnsnames.ora
