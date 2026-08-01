@@ -141,6 +141,9 @@ alias sclean='sudo apt autoremove && sudo apt clean'
 # Update Flatpaks applications
 alias fpupdate='flatpak update -y'
 
+# Show only user-specific Flatpak installations
+alias pklist='flatpak list --user'
+
 # Update Snap packages
 alias snupdate='sudo snap refresh'
 
