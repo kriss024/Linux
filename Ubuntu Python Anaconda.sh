@@ -1,3 +1,5 @@
+# ---------------------- Python Virtual Environment
+
 # Python installation
 # In Debian: 
 sudo apt-get update
@@ -90,7 +92,7 @@ flask run
 # Deactivate a virtual environment
 deactivate
 
-# ---------------------- Conda virtual environments
+# ---------------------- Conda Virtual Environment
 
 # Check if Conda is up to date
 conda update conda
@@ -215,7 +217,7 @@ rm -rf ~/anaconda3             # removes the entire anaconda directory
 rm -rf ~/.anaconda_backup      # anaconda clean creates a back_up of files/dirs, remove it
                                # (conda list; cmd shouldn't respond after the clean up)
 
-# ---------------------- uv - package and project manager
+# ---------------------- UV - Package and Project Manager
 
 # Installing uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -228,16 +230,25 @@ uv self update
 # Installing a specific version
 uv python install 3.12
 
-# Upgrade all uv-managed Python versions
-uv python upgrade
-
-# Running a script
-uv run main.py
-
-# Viewing Python installations
-uv python list
-
 # Creating a new virtual environment
 uv venv
 # or
 uv venv --python 3.12
+
+# Activate the virtual environment
+source .venv/bin/activate
+
+# Deactivating virtual environments
+deactivate
+
+# Install Python packages
+uv pip install <package name>
+
+# Upgrade all uv-managed Python versions
+uv python upgrade
+
+# Running a Python script
+uv run main.py
+
+# Viewing Python installations
+uv python list
