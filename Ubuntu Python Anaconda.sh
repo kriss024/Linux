@@ -67,7 +67,7 @@ pip install cryptography
 pip install ipyparallel
 pip install --upgrade jupyter
 
-jupyter notebook --notebook-dir=/home/notebooks --ip='*' --port=8888 --no-browser --allow-root
+jupyter notebook --notebook-dir="$PWD" --ip='*' --port=8888 --no-browser --allow-root
 
 # Black code formatter
 pip install black
