@@ -28,6 +28,9 @@ python3 -m venv ./venv
 source .venv/bin/activate
 # In MS-Windows: venv\Scripts\activate.bat
 
+# Deactivate a virtual environment
+deactivate
+
 # The PYTHONPATH variable has a value that is a string with a list of directories that Python should add to the sys.path directory list.
 # In Linux: export PYTHONPATH=/home/my_user/code
 # In Linux: export PYTHONPATH="$PWD"
@@ -77,6 +80,9 @@ black {source_file_or_directory}
 # Generate a requirements file
 pip freeze > requirements.txt
 
+# Job example
+.venv/bin/python script.py
+
 # Install Flask
 pip install --upgrade pip setuptools wheel
 pip install Flask
@@ -88,9 +94,6 @@ pip install -r requirements.txt --upgrade
 set FLASK_APP=main.py
 set FLASK_RUN_PORT=8000
 flask run
-
-# Deactivate a virtual environment
-deactivate
 
 # ---------------------- Conda Virtual Environment
 
