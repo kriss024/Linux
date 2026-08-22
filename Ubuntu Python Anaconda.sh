@@ -259,20 +259,31 @@ uv run main.py
 # Viewing Python installations
 uv python list
 
-# Create project
+# Project initialization
 uv init
 
-# Add package
-uv add pandas
+  # Application project (default) 
+  uv init --app
+  
+  # Library project 
+  uv init --lib
 
-# Remove package
-uv remove pandas
+# Managing dependencies (add, remove, sync)
 
-# Synchronize
+  # Add package
+  uv add pandas
+  
+  # Remove package
+  uv remove pandas
+  
+# Sync environment to match pyproject + lock file
 uv sync
 
 # Lock dependencies
 uv lock
+
+  # Upgrade a specific dependency to the latest compatible version 
+  uv lock upgrade numba
 
 # Show dependencies
 uv tree
@@ -282,6 +293,9 @@ uv run python
 
 # Run script
 uv run script.py
+
+# Installing tools globally
+uv tool install black
 
 # List installed tools
 uv tool list
@@ -295,7 +309,32 @@ uv cache clean
 # Safely safely free up disk space (recommended)
 uv cache prune
 
-# ---------------------- UVX - Python Tool Runner/CLI tools
+# Building package
+uv build
+
+# Publishing to PyPI
+uv publish
+
+# | Command / Concept     | Description                                                    |
+# | --------------------- | ---------------------------------------------------------------|
+# | `uv init`             | Initialise a new Python project (app or library).              |
+# | `uv run`              | Run a Python file inside the project’s virtual environment.    |
+# | `uv add`              | Add one or more dependencies and install them.                 |
+# | `uv remove`           | Remove a dependency and update `pyproject.toml`.               |
+# | `uv sync`             | Sync environment to match declared dependencies & lock file.   |
+# | `uv lock`             | Generate or update the lock file.                              |
+# | `uv lock upgrade`     | Upgrade a specific dependency to its latest compatible version.|
+# | `uv tree`             | Show the full dependency tree.                                 |
+# | `uv python list`      | List all Python versions detected by `uv`.                     |
+# | `uv python install`   | Install a specific Python version.                             |
+# | `uvx`                 | Run Python CLI tools in isolated environments (pipx‑like).     |
+# | `uv tool install`     | Install a CLI tool managed by `uv`.                            |
+# | `uv tool uninstall`   | Uninstall a CLI tool.                                          |
+# | `uv tool list`        | List installed CLI tools.                                      |
+# | `uv tool update shell`| Update shell configuration / PATH for tools.                   |
+# | `uv publish`          | Publish a Python package to PyPI or another index.             |
+
+# ---------------------- UVX - Running Python CLI tools
 
 # Run CLI temporarily - launch an interactive PySpark shell
 uvx pyspark
