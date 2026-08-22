@@ -62,8 +62,25 @@ sudo apt install git
 
 # Installing Java
 sudo apt update
-sudo apt install default-jre
+sudo apt install -y openjdk-17-jdk
 java -version
+javac -version
+
+# Add JAVA_HOME to shell profile
+dirname $(dirname $(readlink -f $(which java)))
+
+echo 'export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"' >> ~/.bashrc
+echo 'export PATH="$JAVA_HOME/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+# or 
+cat >> ~/.bashrc << 'EOF'
+
+# JAVA_HOME
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+EOF
+source ~/.bashrc
 
 # Installing Microsoft fonts
 sudo apt install ttf-mscorefonts-installer
