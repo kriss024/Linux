@@ -220,12 +220,15 @@ rm -rf ~/anaconda3             # removes the entire anaconda directory
 rm -rf ~/.anaconda_backup      # anaconda clean creates a back_up of files/dirs, remove it
                                # (conda list; cmd shouldn't respond after the clean up)
 
-# ---------------------- UV - Package and Project Manager
+# ---------------------- UV - Project Management
 
 # Installing uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 # or
 wget -qO- https://astral.sh/uv/install.sh | sh
+
+# Verify
+uv --version
 
 # Upgrading uv
 uv self update
@@ -255,3 +258,74 @@ uv run main.py
 
 # Viewing Python installations
 uv python list
+
+# Create project
+uv init
+
+# Add package
+uv add pandas
+
+# Remove package
+uv remove pandas
+
+#Synchronize
+uv sync
+
+# Lock dependencies
+uv lock
+
+#Show dependencies
+uv tree
+
+# Run Python
+uv run python
+
+# Run script
+uv run script.py
+
+# List installed tools
+uv tool list
+
+# Upgrade tools
+uv tool upgrade --all
+
+# Wipe everything
+uv cache clean
+
+# Safely safely free up disk space (recommended)
+uv cache prune
+
+# ---------------------- UVX - Python Tool Runner/CLI tools
+
+# Run CLI temporarily - launch an interactive PySpark shell
+uvx pyspark
+
+uvx pyspark@3.5.3
+# or
+uvx pyspark@4.0.0
+
+# Pinning Python Versions (uvx --python <version> <tool>)
+uvx --python 3.12 pyspark
+
+# Run PySpark REPL with Delta Lake dependencies
+uvx --with delta-spark pyspark
+
+# Pass arguments
+uvx --from pyspark python script.py
+
+# Format Python code with Black
+uvx black --line-length 88 script.py
+
+# Add temporary dependency (uvx --with package tool)
+uvx --with pandas --with numpy --with scikit-learn pyspark
+
+# Run package with different executable (uvx --from package executable)
+uvx --from pyspark spark-submit script.py
+uvx --from pyspark --with pandas --with pyarrow --with delta-spark spark-submit script.py
+
+# Environment variable passthrough
+export JAVA_HOME=/usr/lib/jvm/java-11
+uvx --from pyspark spark-submit script.py
+
+# Spin up a local Jupyter Notebook environment bundled with pandas, matplotlib, numpy, and scikit-learn
+uvx --with pandas --with matplotlib --with numpy --with scikit-learn jupyter notebook
