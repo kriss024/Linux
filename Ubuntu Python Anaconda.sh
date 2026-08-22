@@ -268,13 +268,13 @@ uv add pandas
 # Remove package
 uv remove pandas
 
-#Synchronize
+# Synchronize
 uv sync
 
 # Lock dependencies
 uv lock
 
-#Show dependencies
+# Show dependencies
 uv tree
 
 # Run Python
@@ -314,6 +314,7 @@ uvx --with delta-spark pyspark
 uvx --from pyspark python script.py
 
 # Format Python code with Black
+uvx black main.py
 uvx black --line-length 88 script.py
 
 # Add temporary dependency (uvx --with package tool)
