@@ -159,6 +159,23 @@ b=3
 sum=$((a + b))
 echo "Sum: $sum"
 
+# bc (Basic Calculator)
+# bc Command Options:
+# -l	--mathlib	Defines a library of math functions and sets the scale variable to 20. The default scale value is 0.
+# -i	--interactive	Forces the interactive mode.
+# -q	--quiet	Starts the command without printing the GNU bc welcome.
+# -v	--version	Prints the program version number, copyright, and quits.
+
+echo "12 + 5" | bc
+echo "scale=2; 10 / 3" | bc
+echo "scale=6; 10 / 3" | bc
+echo "scale=4; s(1)" | bc -l
+echo "5.5 > 5.4" | bc
+echo "i=1; while(i<=3) { i; i+=1 }" | bc
+
+bc <<<"236-192"
+bc <<<"1+1"
+
 # Basic loop with dates
 dates=("1789-07-14" "1815-06-18" "1903-12-17" "1945-05-08" "1969-07-20" "1989-11-09" "2001-09-11" "2008-08-08" "2015-10-21")
 
