@@ -150,15 +150,6 @@ ifconfig
 # In order to get a list of all TCP and UDP network services up-and-running by default in linux
 ss -tulpn
 
-# Use the shell for doing math
-echo $((19*34))
-echo "scale=2; 9*3/((2*2)+1)" | bc
-
-a=10
-b=3
-sum=$((a + b))
-echo "Sum: $sum"
-
 # bc (Basic Calculator)
 # bc Command Options:
 # -l	--mathlib	Defines a library of math functions and sets the scale variable to 20. The default scale value is 0.
