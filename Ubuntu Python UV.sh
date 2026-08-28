@@ -46,7 +46,7 @@ uv init
   # Library project
   uv init --lib
 
-# Managing dependencies (add, remove, sync)
+# Add/Remove dependencies (add, remove, sync)
 
   # Add package
   uv add pandas
@@ -66,38 +66,41 @@ uv lock
 # Show dependencies
 uv tree
 
-# Run Python
-uv run python
-
-# Run script
-uv run script.py
+# Execution
+  # Run Python
+  uv run python
+  
+  # Run script
+  uv run script.py
 
   # Run a standalone script with temporary ad-hoc dependencies
   uv run --with pandas script.py
 
-# List installed tools
-uv tool list
+# Tooling (Global CLI utilities)
+  # List installed tools
+  uv tool list
+  
+  # Upgrade installed tools
+  uv tool upgrade --all
+  
+  # Installing tools globally
+  uv tool install black
+  
+  # Uninstall a tool
+  uv tool uninstall black
 
-# Upgrade installed tools
-uv tool upgrade --all
-
-# Installing tools globally
-uv tool install black
-
-# Uninstall a tool
-uv tool uninstall black
-
-# Wipe everything
-uv cache clean
-
-# Safely safely free up disk space (recommended)
-uv cache prune
-
-# Building package
-uv build
-
-# Publishing to PyPI
-uv publish
+# Maintenance & Publishing
+  # Wipe everything
+  uv cache clean
+  
+  # Safely safely free up disk space (recommended)
+  uv cache prune
+  
+  # Building package
+  uv build
+  
+  # Publishing to PyPI
+  uv publish
 
 # | Command / Concept     | Description                                                    |
 # | --------------------- | ---------------------------------------------------------------|
