@@ -72,14 +72,20 @@ uv run python
 # Run script
 uv run script.py
 
-# Installing tools globally
-uv tool install black
+  # Run a standalone script with temporary ad-hoc dependencies
+  uv run --with pandas script.py
 
 # List installed tools
 uv tool list
 
-# Upgrade tools
+# Upgrade installed tools
 uv tool upgrade --all
+
+# Installing tools globally
+uv tool install black
+
+# Uninstall a tool
+uv tool uninstall black
 
 # Wipe everything
 uv cache clean
