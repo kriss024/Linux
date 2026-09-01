@@ -154,5 +154,14 @@ uvx --from pyspark --with pandas --with pyarrow --with delta-spark spark-submit 
 export JAVA_HOME=/usr/lib/jvm/java-11
 uvx --from pyspark spark-submit script.py
 
-# Spin up a local Jupyter Notebook environment bundled with pandas, matplotlib, numpy, and scikit-learn
-uvx --with pandas --with matplotlib --with numpy --with scikit-learn jupyter notebook
+# Spin up a Jupyter Notebook environment with a Data Science stack
+uvx --python 3.12 \
+    --with numpy \
+    --with pandas \
+    --with scipy \
+    --with scikit-learn \
+    --with statsmodels \
+    --with plotly \
+    --with kaleido \
+    --with openpyxl \
+    jupyter notebook
