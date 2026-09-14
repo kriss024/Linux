@@ -233,7 +233,7 @@ alias restore='git fetch && git restore'
 # Create a new or copy branch and switch to it.
 alias new-branch='git checkout -b'
 alias empty-branch='git switch --orphan'
-alias new-dev-branch='git checkout -b development'
+alias new-branch-dev='git checkout -b development'
 
 # Switch to an already existing branch.
 alias switch='git checkout'
