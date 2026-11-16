@@ -10,8 +10,12 @@ git config --list
 # Generowanie klucza SSH do GitLab
 ssh-keygen -t ed25519
 cat ~/.ssh/id_ed25519.pub | clip
-ssh -T git@github.com
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/id_ed25519
+chmod 644 ~/.ssh/id_ed25519.pub
+ssh -T git@gitlab.com
 
+# Podstawowe polecenia git
 git init - utworzenie nowego repozytorium z istniejącego projektu
 git clone <repo_url> – sklonowanie repozytorium zdalnego (GitHub) na maszynie lokalnej
 git rm <file or folder> - usunięcie pliku z repo
@@ -31,7 +35,6 @@ git branch -f <new_local_branch_name> origin/remote_branch_name - pobranie wybra
 git checkout <new_local_branch_name> - przejście na pobranego brancha
 git reset HEAD -- . - usunięcie plików z obszaru roboczego
 
-# Kilka komend, które mogą się okazać pomocne w codziennej pracy:
 git diff <file> - pokazanie zmian w danym pliku w formie tekstowej
 git branch – sprawdzenie, na jakim branchu się aktualnie znajdujemy
 git checkout <branch> - przejście na wskazany branch,
