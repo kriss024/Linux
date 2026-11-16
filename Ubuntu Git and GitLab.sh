@@ -26,7 +26,6 @@ git commit –m '<commit_message>' – stworzenie checkpointu z opisem wcześnie
 git commit --amend - poprawianie commita przed wysłaniem na serwer np. git commit -m "adding sql files"
 git push origin <branch> - faktyczne wysyłka zacommitowanych plików do zdalnego repozytorium np. git push origin master
 git push - wysyłka zacommitowanych plików do zdalnego repozytorium, jeśli niezmieniamy brancha
-.gitignore – plik, który mówi gitowi, jakich plików ma nie trackować (tworzymy poprzez touch .gitignore w głównym katalogu repozytorium).
 git pull origin main - pobranie na dysk lokalny kopii z repozytorium
 git pull --all - pobranie na dysk lokalny wszystkich branchy z repozytorium
 git pull - pobieranie na dysk brancha z repozytorium zdalnego, jeśli wcześniej była komunikacja z tym branchem
@@ -43,6 +42,8 @@ git status – sprawdzenie, jaki status mają pliki na lokalnej maszynie, nad kt
 git tag <tag> - stworzenie milestone’a w danym momencie rozwoju kodu (podobne do commita, ale używa się rzadziej, raczej przy wersjonowaniu kodu).
 git checkout -b <branch new> <branch old> - skopiowanie brancha
 git branch --delete <branch> - usunięcie brancha
+
+.gitignore – plik, który mówi gitowi, jakich plików ma nie trackować (tworzymy poprzez touch .gitignore w głównym katalogu repozytorium).
 
 # Pobranie pojedynczego pliku z origin/master
 git fetch
@@ -94,7 +95,7 @@ git switch --orphan <local_branch>
 git commit -a -m "initial commit of <local_branch>" --allow-empty
 git push -u origin <local_branch>
 
-# Cheatsheet z komend Gita: 
+# Cheatsheet z komend Gita:
 https://training.github.com/downloads/pl/github-git-cheat-sheet/
 https://www.gitkraken.com/learn/git/commands
 https://sandeeppant.medium.com/git-cheat-sheet-basic-intermediate-and-advanced-git-commands-cdd61c504974
